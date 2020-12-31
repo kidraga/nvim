@@ -1,0 +1,17 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "javascript", "html", "yaml",  "json", "python"],
+
+  // python config
+  // go to: https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
+  // click coc-python
+  // scroll down to see full list of options
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+
+  "snippets.ultisnips.directories":
+  [
+    "UltiSnips",
+    "~/.config/nvim/utils/snips"
+  ]
+
+}
