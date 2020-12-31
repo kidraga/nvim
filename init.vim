@@ -20,4 +20,5 @@ source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
 " Startify
 source $HOME/.config/nvim/plug-config/start-screen.vim
-
+" Signify
+source $HOME/.config/nvim/plug-config/signify.vim

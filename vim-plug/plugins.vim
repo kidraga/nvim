@@ -34,4 +34,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     Plug 'mhinz/vim-startify'
 
+    Plug 'mhinz/vim-signify'
+    Plug 'tpope/vim-fugitive'
+
 call plug#end()
