@@ -6,7 +6,11 @@ source $HOME/.config/nvim/general/settings.vim
 source $HOME/.config/nvim/keys/mappings.vim
 " Themes
 " For more themes: https://github.com/rafi/awesome-vim-colorschemes
-source $HOME/.config/nvim/themes/onedark.vim
+"source $HOME/.config/nvim/themes/onedark.vim
+"source $HOME/.config/nvim/themes/base16-vim.vim
+"source $HOME/.config/nvim/themes/onehalf.vim
+source $HOME/.config/nvim/themes/tender.vim
+
 " coc config file
 source $HOME/.config/nvim/plug-config/coc.vim
 " Airline status bar
