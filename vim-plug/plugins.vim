@@ -37,4 +37,5 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mhinz/vim-signify'
     Plug 'tpope/vim-fugitive'
 
+    Plug 'easymotion/vim-easymotion'
 call plug#end()
