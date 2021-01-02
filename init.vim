@@ -8,8 +8,8 @@ source $HOME/.config/nvim/keys/mappings.vim
 " For more themes: https://github.com/rafi/awesome-vim-colorschemes
 "source $HOME/.config/nvim/themes/onedark.vim
 "source $HOME/.config/nvim/themes/base16-vim.vim
-"source $HOME/.config/nvim/themes/onehalf.vim
-source $HOME/.config/nvim/themes/tender.vim
+source $HOME/.config/nvim/themes/onehalf.vim
+"source $HOME/.config/nvim/themes/tender.vim
 
 " coc config file
 source $HOME/.config/nvim/plug-config/coc.vim
@@ -26,3 +26,5 @@ source $HOME/.config/nvim/plug-config/signify.vim
 source $HOME/.config/nvim/plug-config/easymotion.vim
 " Floaterm
 source $HOME/.config/nvim/plug-config/floaterm.vim
+
+luafile $HOME/.config/nvim/lua/treesitter.lua
