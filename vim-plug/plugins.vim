@@ -38,4 +38,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-fugitive'
 
     Plug 'easymotion/vim-easymotion'
+
+    Plug 'voldikss/vim-floaterm'
 call plug#end()

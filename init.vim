@@ -22,3 +22,7 @@ source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/start-screen.vim
 " Signify
 source $HOME/.config/nvim/plug-config/signify.vim
+" Easymotion
+source $HOME/.config/nvim/plug-config/easymotion.vim
+" Floaterm
+source $HOME/.config/nvim/plug-config/floaterm.vim

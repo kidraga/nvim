@@ -1,0 +1,1 @@
+" Easy motion configs
