@@ -13,6 +13,7 @@ source $HOME/.config/nvim/themes/onehalf.vim
 
 " coc config file
 source $HOME/.config/nvim/plug-config/coc.vim
+source $HOME/.config/nvim/plug-config/coc-extensions.vim
 " Airline status bar
 source $HOME/.config/nvim/themes/airline.vim
 " Lightline status bar
