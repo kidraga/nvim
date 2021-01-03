@@ -9,9 +9,17 @@
   "python.linting.pylintEnabled": true,
 
   "snippets.ultisnips.directories":
-  [
-    "UltiSnips",
-    "~/.config/nvim/utils/snips"
-  ]
+    [
+      "UltiSnips",
+      "~/.config/nvim/utils/snips"
+    ],
+
+  "codeLens.enabled": true,
+  "java.referencesCodeLens.enabled": true,
+  "java.implementationsCodeLens.enabled": true,
+  "java.completion.enabled": true,
+  "java.completion.overwrite": false,
+  "java.completion.guessMethodArguments": true
+
 
 }
