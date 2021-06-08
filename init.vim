@@ -29,3 +29,5 @@ source $HOME/.config/nvim/plug-config/easymotion.vim
 source $HOME/.config/nvim/plug-config/floaterm.vim
 
 luafile $HOME/.config/nvim/lua/treesitter.lua
+" NERDTree
+source $HOME/.config/nvim/plug-config/nerdtree.vim
