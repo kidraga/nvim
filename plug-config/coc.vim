@@ -1,3 +1,5 @@
+" Most of these copied from https://github.com/neoclide/coc.nvim
+
 " TextEdit might fail if hidden is not set.
 set hidden
 
@@ -5,12 +7,9 @@ set hidden
 set nobackup
 set nowritebackup
 
-" Give more space for displaying messages.
-set cmdheight=2
-
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
-set updatetime=300
+set updatetime=100
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
@@ -38,12 +37,13 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-" Use <c-space> to trigger completion.
+" Use <c-o> to trigger completion in insert mode.
 if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
+  inoremap <silent><expr> <c-o> coc#refresh()
 else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
+
 
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
@@ -78,9 +78,11 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
+" 重命名
 nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
+" formatting选中区域
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 

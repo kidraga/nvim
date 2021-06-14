@@ -26,9 +26,6 @@ nnoremap <c-u> viw~
 " SHIFT-TAB will go back
 nnoremap <S-TAB> :bprevious<CR>
 
-" Alternate way to save
-" ctrl+s to save
-nnoremap <C-s> :w<CR>
 " <TAB>: completion.
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 

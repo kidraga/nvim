@@ -1,25 +1,27 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["html", "yaml",  "json"],
-
+  "coc.preferences.formatOnSaveFiletypes": [
+    "html",
+    "yaml",
+    "json"
+  ],
+  "coc.preferences.extensionUpdateCheck": "weekly",
+  // not select any suggestion by default
+  "suggest.noselect": true,
   // python config
   // go to: https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
   // click coc-python
   // scroll down to see full list of options
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
-
-  "snippets.ultisnips.directories":
-    [
-      "UltiSnips",
-      "~/.config/nvim/utils/snips"
-    ],
-
+  "snippets.ultisnips.directories": [
+    "UltiSnips",
+    "~/.config/nvim/utils/snips"
+  ],
   "codeLens.enabled": true,
+  // coc java
   "java.referencesCodeLens.enabled": true,
   "java.implementationsCodeLens.enabled": true,
   "java.completion.enabled": true,
   "java.completion.overwrite": false,
   "java.completion.guessMethodArguments": true
-
-
 }
