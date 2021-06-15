@@ -19,6 +19,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'chriskempson/base16-vim'
     Plug 'sonph/onehalf', { 'rtp': 'vim' }
     Plug 'jacoborus/tender.vim'
+    Plug 'ayu-theme/ayu-vim'
+    Plug 'jdsimcoe/hyper.vim'
+    Plug 'ulwlu/elly.vim'
+    Plug 'rakr/vim-one'
+    Plug 'w0ng/vim-hybrid'
     " coc
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Airline and Airline themes

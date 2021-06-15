@@ -7,9 +7,14 @@ source $HOME/.config/nvim/keys/mappings.vim
 " Themes
 " For more themes: https://github.com/rafi/awesome-vim-colorschemes
 "source $HOME/.config/nvim/themes/onedark.vim
-source $HOME/.config/nvim/themes/base16-vim.vim
+"source $HOME/.config/nvim/themes/base16-vim.vim
 "source $HOME/.config/nvim/themes/onehalf.vim
 "source $HOME/.config/nvim/themes/tender.vim
+"source $HOME/.config/nvim/themes/ayu.vim
+"source $HOME/.config/nvim/themes/hyper.vim
+"source $HOME/.config/nvim/themes/elly.vim
+"source $HOME/.config/nvim/themes/vim-one.vim
+source $HOME/.config/nvim/themes/vim-hybrid.vim
 
 " coc config file
 source $HOME/.config/nvim/plug-config/coc.vim
