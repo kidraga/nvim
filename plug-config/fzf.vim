@@ -18,20 +18,13 @@ nnoremap <leader>m :Marks<CR>
 
 
 let g:fzf_tags_command = 'ctags -R'
-" Border color
-let g:fzf_layout = 
-      \ {'up':'~90%', 
-        \'window': { 
-          \'width': 0.8, 
-          \'height': 0.8,
-          \'yoffset':0.5,
-          \'xoffset': 0.5, 
-          \'highlight': 'Todo', 
-          \'border': 'sharp'  
-        \}
-      \}
+" show fzf at bottom
+let g:fzf_layout = {'down': '~40%'}
+let g:fzf_preview_window = ['right:60%', 'ctrl-/']
 
 let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
+" This requires you have ripgrip installed
+" `brew install ripgrip`
 let $FZF_DEFAULT_COMMAND="rg --files --hidden"
 
 
