@@ -45,7 +45,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'easymotion/vim-easymotion'
     " Floaterm 
     Plug 'voldikss/vim-floaterm'
-    " Treesitter for better syntax highlighting
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-    Plug 'nvim-treesitter/playground'
+    " commenter
+    Plug 'tpope/vim-commentary'
 call plug#end()
