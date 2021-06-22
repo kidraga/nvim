@@ -39,7 +39,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     Plug 'mhinz/vim-startify'
 
-    Plug 'mhinz/vim-signify'
+    " Git gutter status
+    " Plug 'mhinz/vim-signify'
+    Plug 'airblade/vim-gitgutter'
+    " Git integration
     Plug 'tpope/vim-fugitive'
 
     Plug 'easymotion/vim-easymotion'
@@ -47,4 +50,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'voldikss/vim-floaterm'
     " commenter
     Plug 'tpope/vim-commentary'
+    " Better search highlight
+    Plug 'romainl/vim-cool'
+    " Quick search key bindings
+    Plug 'liuchengxu/vim-which-key'
 call plug#end()

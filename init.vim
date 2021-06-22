@@ -27,7 +27,9 @@ source $HOME/.config/nvim/plug-config/fzf.vim
 " Startify
 source $HOME/.config/nvim/plug-config/start-screen.vim
 " Signify
-source $HOME/.config/nvim/plug-config/signify.vim
+" source $HOME/.config/nvim/plug-config/signify.vim
+" gitgutter
+source $HOME/.config/nvim/plug-config/vim-gitgutter.vim
 " Easymotion
 source $HOME/.config/nvim/plug-config/easymotion.vim
 " Floaterm
