@@ -53,4 +53,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'romainl/vim-cool'
     " Quick search key bindings
     Plug 'liuchengxu/vim-which-key'
+    " Snippets
+    Plug 'honza/vim-snippets'
 call plug#end()
