@@ -22,7 +22,8 @@ nnoremap <c-u> viw~
 " Tried to set as ctrl+TAB but not working since it's reserved for iterm to
 " switch tabs
 " Same as ctrl+shift+tab
-nnoremap <leader><TAB> :bnext<CR>
+" nnoremap <leader><TAB> :bnext<CR>
+nnoremap <TAB> :bnext<CR>
 " SHIFT-TAB will go back
 nnoremap <S-TAB> :bprevious<CR>
 
