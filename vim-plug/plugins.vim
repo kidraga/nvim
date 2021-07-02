@@ -63,6 +63,5 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " React and jsx
     Plug 'yuezk/vim-js'
-    Plug 'leafgarland/typescript-vim' " tsx syntax highlight
     Plug 'maxmellon/vim-jsx-pretty'
 call plug#end()

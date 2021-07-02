@@ -12,7 +12,6 @@ let g:coc_global_extensions = [
 \ 'coc-vimlsp', 
 \ 'coc-xml', 
 \ 'coc-yaml',
-\ 'coc-tsserver',
 \ 'coc-snippets',
 \ 'coc-prettier',
 \ 'coc-eslint',
