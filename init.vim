@@ -12,8 +12,11 @@ source $HOME/.config/nvim/keys/mappings.vim
 " source $HOME/.config/nvim/themes/tender.vim
 " source $HOME/.config/nvim/themes/ayu.vim
 " source $HOME/.config/nvim/themes/vim-one.vim
-source $HOME/.config/nvim/themes/vim-hybrid.vim
+" source $HOME/.config/nvim/themes/vim-hybrid.vim
 " source $HOME/.config/nvim/themes/gruvbox.vim
+" source $HOME/.config/nvim/themes/seoul256.vim
+" source $HOME/.config/nvim/themes/sonokai.vim
+source $HOME/.config/nvim/themes/oceanNext.vim
 
 " coc config file
 source $HOME/.config/nvim/plug-config/coc.vim
@@ -38,3 +41,5 @@ source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/nerdtree.vim
 " Commenter
 source $HOME/.config/nvim/plug-config/commentary.vim
+" Ultisnips
+source $HOME/.config/nvim/plug-config/ultisnips.vim

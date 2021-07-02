@@ -13,15 +13,5 @@
   // scroll down to see full list of options
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
-  "snippets.ultisnips.directories": [
-    "UltiSnips",
-    "~/.config/nvim/utils/snips"
-  ],
-  "codeLens.enabled": true,
-  // coc java
-  "java.referencesCodeLens.enabled": true,
-  "java.implementationsCodeLens.enabled": true,
-  "java.completion.enabled": true,
-  "java.completion.overwrite": false,
-  "java.completion.guessMethodArguments": true
+  "codeLens.enabled": true
 }

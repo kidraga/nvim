@@ -23,6 +23,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'rakr/vim-one'
     Plug 'w0ng/vim-hybrid'
     Plug 'morhetz/gruvbox'
+    Plug 'junegunn/seoul256.vim'
+    Plug 'sainnhe/sonokai'
+    Plug 'rktjmp/lush.nvim'
+    Plug 'mhartington/oceanic-next'
     " coc
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Airline and Airline themes
