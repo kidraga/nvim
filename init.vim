@@ -46,3 +46,7 @@ source $HOME/.config/nvim/plug-config/commentary.vim
 source $HOME/.config/nvim/plug-config/ultisnips.vim
 " Signify
 source $HOME/.config/nvim/plug-config/signify.vim
+" MarkdownPreview
+source $HOME/.config/nvim/plug-config/markdown-preview.vim
+" markdown img paste
+source $HOME/.config/nvim/plug-config/md-imag-paste.vim

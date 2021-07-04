@@ -67,4 +67,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " React and jsx
     Plug 'yuezk/vim-js'
     Plug 'maxmellon/vim-jsx-pretty'
+
+    " Markdown support
+    " save pic in markdown. Need to install xclip first
+    Plug 'ferrine/md-img-paste.vim'
+    " markdown preview
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+    " Goyo mode
+    Plug 'junegunn/goyo.vim'
 call plug#end()
