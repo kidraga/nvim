@@ -7,7 +7,6 @@ let g:coc_global_extensions = [
 \ 'coc-angular', 
 \ 'coc-floaterm', 
 \ 'coc-fzf-preview', 
-\ 'coc-git', 
 \ 'coc-sh', 
 \ 'coc-vimlsp', 
 \ 'coc-xml', 

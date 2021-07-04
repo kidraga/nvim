@@ -27,6 +27,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'sainnhe/sonokai'
     Plug 'rktjmp/lush.nvim'
     Plug 'mhartington/oceanic-next'
+    Plug 'jordwalke/flatlandia'
     " coc
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Airline and Airline themes
@@ -43,8 +44,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mhinz/vim-startify'
 
     " Git gutter status
-    " Plug 'mhinz/vim-signify'
-    Plug 'airblade/vim-gitgutter'
+    Plug 'mhinz/vim-signify'
+    " Plug 'airblade/vim-gitgutter'
     " Git integration
     Plug 'tpope/vim-fugitive'
 
@@ -60,6 +61,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Snippets
     Plug 'honza/vim-snippets'
     Plug 'SirVer/ultisnips'
+    "
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
     " React and jsx
     Plug 'yuezk/vim-js'

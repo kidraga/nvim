@@ -14,9 +14,10 @@ source $HOME/.config/nvim/keys/mappings.vim
 " source $HOME/.config/nvim/themes/vim-one.vim
 " source $HOME/.config/nvim/themes/vim-hybrid.vim
 " source $HOME/.config/nvim/themes/gruvbox.vim
-" source $HOME/.config/nvim/themes/seoul256.vim
+source $HOME/.config/nvim/themes/seoul256.vim
 " source $HOME/.config/nvim/themes/sonokai.vim
-source $HOME/.config/nvim/themes/oceanNext.vim
+" source $HOME/.config/nvim/themes/oceanNext.vim
+" source $HOME/.config/nvim/themes/flatlandia.vim
 
 " coc config file
 source $HOME/.config/nvim/plug-config/coc.vim
@@ -28,14 +29,14 @@ source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
 " Startify
 source $HOME/.config/nvim/plug-config/start-screen.vim
-" Signify
-" source $HOME/.config/nvim/plug-config/signify.vim
 " gitgutter
-source $HOME/.config/nvim/plug-config/vim-gitgutter.vim
+" source $HOME/.config/nvim/plug-config/vim-gitgutter.vim
 " Easymotion
 source $HOME/.config/nvim/plug-config/easymotion.vim
 " Floaterm
 source $HOME/.config/nvim/plug-config/floaterm.vim
+" Treesitter
+source $HOME/.config/nvim/plug-config/treesitter.vim
 
 " NERDTree
 source $HOME/.config/nvim/plug-config/nerdtree.vim
@@ -43,3 +44,5 @@ source $HOME/.config/nvim/plug-config/nerdtree.vim
 source $HOME/.config/nvim/plug-config/commentary.vim
 " Ultisnips
 source $HOME/.config/nvim/plug-config/ultisnips.vim
+" Signify
+source $HOME/.config/nvim/plug-config/signify.vim

@@ -3,4 +3,4 @@ set termguicolors     " enable true colors support
 " let ayucolor="mirage" " for mirage version of theme
 let ayucolor="dark"   " for dark version of theme
 colorscheme ayu
-highlight Normal guibg=none
+" highlight Normal guibg=none
