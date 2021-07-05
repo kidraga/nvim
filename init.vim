@@ -50,3 +50,5 @@ source $HOME/.config/nvim/plug-config/signify.vim
 source $HOME/.config/nvim/plug-config/markdown-preview.vim
 " markdown img paste
 source $HOME/.config/nvim/plug-config/md-imag-paste.vim
+" indentLine
+source $HOME/.config/nvim/plug-config/indentLine.vim

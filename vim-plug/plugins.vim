@@ -75,4 +75,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
     " Goyo mode
     Plug 'junegunn/goyo.vim'
+    
+    " Indentation
+    Plug 'Yggdroot/indentLine'
 call plug#end()
