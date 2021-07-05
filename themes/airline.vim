@@ -220,7 +220,7 @@ set noshowmode
 " let g:airline_theme = 'lessnoise' "Nice one
 " let g:airline_theme = 'light'
 " let g:airline_theme = 'lighthaus' "ok
-let g:airline_theme = 'lucius' "Not bad
+" let g:airline_theme = 'lucius' "Not bad
 " let g:airline_theme = 'luna' "Nice green
 " let g:airline_theme = 'minimalist'
 " let g:airline_theme = 'molokai'
@@ -240,7 +240,7 @@ let g:airline_theme = 'lucius' "Not bad
 " let g:airline_theme = 'seagull' "Nice
 " let g:airline_theme = 'selenized'
 " let g:airline_theme = 'selenized_bw'
-" let g:airline_theme = 'seoul256' "Ok to use
+let g:airline_theme = 'seoul256' "good with vim-hybrid
 " let g:airline_theme = 'serene'
 " let g:airline_theme = 'sierra'
 " let g:airline_theme = 'silver'
