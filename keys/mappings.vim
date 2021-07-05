@@ -12,12 +12,6 @@ nnoremap <C-S-k>    :resize +2<CR>
 nnoremap <C-S-h>    :vertical resize -2<CR>
 nnoremap <C-S-l>    :vertical resize +2<CR>
 
-" Easy CAPS
-" in insert mode, press ctrl+u to uppercase the whole word
-inoremap <c-u> <ESC>viw~i
-" in normal mode, press ctrl+u to uppercase the whole word
-nnoremap <c-u> viw~
-
 " TAB in general mode will move to next text buffer
 " Tried to set as ctrl+TAB but not working since it's reserved for iterm to
 " switch tabs
