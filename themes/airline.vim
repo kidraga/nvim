@@ -14,7 +14,6 @@ let g:airline_left_sep = "\uE0B8"
 let g:airline_right_sep = "\uE0BA"
 let g:airline_detect_modified = 1
 let g:airline_symbols_ascii = 1
-" let g:airline_symbols.branch = ''
 " let g:airline_symbols.readonly = ''
 " let g:airline_symbols.linenr = '☰'
 " let g:airline_symbols.maxlinenr = ''
@@ -197,7 +196,7 @@ set noshowmode
 " let g:airline_theme = 'base16_zenburn'
 " let g:airline_theme = 'base16color' "Not bad
 " let g:airline_theme = 'behelit'
-" let g:airline_theme = 'biogoo' "Not bad
+let g:airline_theme = 'biogoo' "Not bad
 " let g:airline_theme = 'bubblegum' "Not bad
 " let g:airline_theme = 'cobalt2' "Nice green
 " let g:airline_theme = 'cool'
@@ -240,7 +239,7 @@ set noshowmode
 " let g:airline_theme = 'seagull' "Nice
 " let g:airline_theme = 'selenized'
 " let g:airline_theme = 'selenized_bw'
-let g:airline_theme = 'seoul256' "good with vim-hybrid
+" let g:airline_theme = 'seoul256' "good with vim-hybrid
 " let g:airline_theme = 'serene'
 " let g:airline_theme = 'sierra'
 " let g:airline_theme = 'silver'
