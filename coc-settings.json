@@ -13,5 +13,5 @@
   // scroll down to see full list of options
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
-  "codeLens.enabled": true
+  "diagnostic.checkCurrentLine": true
 }

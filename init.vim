@@ -52,3 +52,5 @@ source $HOME/.config/nvim/plug-config/markdown-preview.vim
 source $HOME/.config/nvim/plug-config/md-imag-paste.vim
 " indentLine
 source $HOME/.config/nvim/plug-config/indentLine.vim
+" fugitive
+source $HOME/.config/nvim/plug-config/fugitive.vim
