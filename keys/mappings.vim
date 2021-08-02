@@ -38,3 +38,20 @@ nnoremap <C-l> <C-w>l
 
 " Close buffer and return to previous buffer without closing split
 nnoremap <leader>bd :bp\|bd #<CR>
+
+" Y yank to the end of the line
+" By default Y yank the whole line, which is the same as yy
+nnoremap Y y$
+
+" Keep cursor centered
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
+" Undo won't delete whole line, but will stop at below sign.
+" Add any sign you like.
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+
