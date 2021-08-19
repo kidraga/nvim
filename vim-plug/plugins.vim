@@ -63,6 +63,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'SirVer/ultisnips'
     "
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    " surround: https://github.com/tpope/vim-surround
+    Plug 'tpope/vim-surround'
 
     " React and jsx
     Plug 'yuezk/vim-js'
