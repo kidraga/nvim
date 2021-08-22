@@ -55,3 +55,6 @@ inoremap . .<c-g>u
 inoremap ! !<c-g>u
 inoremap ? ?<c-g>u
 
+" Quick save
+nnoremap SS :w<CR>
+nnoremap SA :wa<CR>
