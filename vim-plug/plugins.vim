@@ -28,6 +28,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'rktjmp/lush.nvim'
     Plug 'mhartington/oceanic-next'
     Plug 'jordwalke/flatlandia'
+    Plug 'lifepillar/vim-solarized8'
     " coc
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Airline and Airline themes

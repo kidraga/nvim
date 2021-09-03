@@ -12,12 +12,13 @@ source $HOME/.config/nvim/keys/mappings.vim
 " source $HOME/.config/nvim/themes/tender.vim
 " source $HOME/.config/nvim/themes/ayu.vim
 " source $HOME/.config/nvim/themes/vim-one.vim
-source $HOME/.config/nvim/themes/vim-hybrid.vim
+" source $HOME/.config/nvim/themes/vim-hybrid.vim
 " source $HOME/.config/nvim/themes/gruvbox.vim
 " source $HOME/.config/nvim/themes/seoul256.vim
 " source $HOME/.config/nvim/themes/sonokai.vim
 " source $HOME/.config/nvim/themes/oceanNext.vim
 " source $HOME/.config/nvim/themes/flatlandia.vim
+source $HOME/.config/nvim/themes/solarized8.vim
 
 " coc config file
 source $HOME/.config/nvim/plug-config/coc.vim

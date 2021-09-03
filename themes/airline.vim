@@ -196,7 +196,7 @@ set noshowmode
 " let g:airline_theme = 'base16_zenburn'
 " let g:airline_theme = 'base16color' "Not bad
 " let g:airline_theme = 'behelit'
-let g:airline_theme = 'biogoo' "Not bad
+" let g:airline_theme = 'biogoo' "Not bad
 " let g:airline_theme = 'bubblegum' "Not bad
 " let g:airline_theme = 'cobalt2' "Nice green
 " let g:airline_theme = 'cool'
@@ -247,7 +247,7 @@ let g:airline_theme = 'biogoo' "Not bad
 " let g:airline_theme = 'soda'
 " let g:airline_theme = 'sol'
 " let g:airline_theme = 'solarized'
-" let g:airline_theme = 'solarized_flood' "pretty cool with italic font
+let g:airline_theme = 'solarized_flood' "pretty cool with italic font
 " let g:airline_theme = 'supernova'
 " let g:airline_theme = 'term'
 " let g:airline_theme = 'term_light'
