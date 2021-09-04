@@ -247,7 +247,7 @@ set noshowmode
 " let g:airline_theme = 'soda'
 " let g:airline_theme = 'sol'
 " let g:airline_theme = 'solarized'
-let g:airline_theme = 'solarized_flood' "pretty cool with italic font
+" let g:airline_theme = 'solarized_flood' "pretty cool with italic font
 " let g:airline_theme = 'supernova'
 " let g:airline_theme = 'term'
 " let g:airline_theme = 'term_light'
@@ -259,3 +259,5 @@ let g:airline_theme = 'solarized_flood' "pretty cool with italic font
 " let g:airline_theme = 'wombat'
 " let g:airline_theme = 'xtermlight'
 " let g:airline_theme = 'zenburn' "Nice dark green
+
+let g:airline_theme = 'everforest'

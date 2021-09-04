@@ -29,6 +29,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mhartington/oceanic-next'
     Plug 'jordwalke/flatlandia'
     Plug 'lifepillar/vim-solarized8'
+    Plug 'sainnhe/everforest'
     " coc
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Airline and Airline themes
@@ -66,6 +67,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     " surround: https://github.com/tpope/vim-surround
     Plug 'tpope/vim-surround'
+    " highlight current word under cursor
+    Plug 'dominikduda/vim_current_word'
 
     " React and jsx
     Plug 'yuezk/vim-js'

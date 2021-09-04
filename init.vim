@@ -18,7 +18,8 @@ source $HOME/.config/nvim/keys/mappings.vim
 " source $HOME/.config/nvim/themes/sonokai.vim
 " source $HOME/.config/nvim/themes/oceanNext.vim
 " source $HOME/.config/nvim/themes/flatlandia.vim
-source $HOME/.config/nvim/themes/solarized8.vim
+" source $HOME/.config/nvim/themes/solarized8.vim
+source $HOME/.config/nvim/themes/everforest.vim
 
 " coc config file
 source $HOME/.config/nvim/plug-config/coc.vim
@@ -55,3 +56,5 @@ source $HOME/.config/nvim/plug-config/md-imag-paste.vim
 source $HOME/.config/nvim/plug-config/indentLine.vim
 " fugitive
 source $HOME/.config/nvim/plug-config/fugitive.vim
+" vim_current_word
+source $HOME/.config/nvim/plug-config/vim_current_word.vim
