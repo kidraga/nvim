@@ -30,6 +30,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'jordwalke/flatlandia'
     Plug 'lifepillar/vim-solarized8'
     Plug 'sainnhe/everforest'
+    Plug 'keith/parsec.vim'
+    Plug 'sts10/vim-pink-moon'
+    Plug 'AlessandroYorba/Sierra'
+    Plug 'chase/focuspoint-vim'
     " coc
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Airline and Airline themes
