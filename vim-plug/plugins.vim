@@ -34,6 +34,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'sts10/vim-pink-moon'
     Plug 'AlessandroYorba/Sierra'
     Plug 'chase/focuspoint-vim'
+    Plug 'ozkanonur/nimda.vim'
+    Plug 'jonathanfilip/vim-lucius'
     " coc
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Airline and Airline themes

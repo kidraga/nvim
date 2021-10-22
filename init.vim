@@ -23,6 +23,8 @@ source $HOME/.config/nvim/themes/vim-hybrid.vim
 " source $HOME/.config/nvim/themes/focuspoint.vim
 " source $HOME/.config/nvim/themes/sierra.vim
 " source $HOME/.config/nvim/themes/pinkmoon.vim
+" source $HOME/.config/nvim/themes/nimda.vim
+" source $HOME/.config/nvim/themes/vim-lucius.vim
 
 " coc config file
 source $HOME/.config/nvim/plug-config/coc.vim

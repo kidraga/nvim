@@ -10,8 +10,10 @@ let g:airline_powerline_fonts = 1
 
 let g:airline_powerline_fonts = 1
 " need to download fonts from https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/UbuntuMono/Regular/complete
-let g:airline_left_sep = "\uE0B8"
-let g:airline_right_sep = "\uE0BA"
+" let g:airline_left_sep = "\uE0B8"
+" let g:airline_right_sep = "\uE0BA"
+let g:airline_left_sep = ""
+let g:airline_right_sep = ""
 let g:airline_detect_modified = 1
 let g:airline_symbols_ascii = 1
 " let g:airline_symbols.readonly = ''
@@ -219,7 +221,7 @@ set noshowmode
 " let g:airline_theme = 'lessnoise' "Nice one
 " let g:airline_theme = 'light'
 " let g:airline_theme = 'lighthaus' "ok
-" let g:airline_theme = 'lucius' "Not bad
+let g:airline_theme = 'lucius' "Not bad
 " let g:airline_theme = 'luna' "Nice green
 " let g:airline_theme = 'minimalist'
 " let g:airline_theme = 'molokai'
@@ -247,7 +249,7 @@ set noshowmode
 " let g:airline_theme = 'soda'
 " let g:airline_theme = 'sol'
 " let g:airline_theme = 'solarized'
-let g:airline_theme = 'solarized_flood' "pretty cool with italic font
+" let g:airline_theme = 'solarized_flood' "pretty cool with italic font
 " let g:airline_theme = 'supernova'
 " let g:airline_theme = 'term'
 " let g:airline_theme = 'term_light'
