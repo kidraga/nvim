@@ -157,7 +157,7 @@ set noshowmode
 " let g:airline_theme = 'base16_monokai'
 " let g:airline_theme = 'base16_nord' "Bad
 " let g:airline_theme = 'base16_nova'
-" let g:airline_theme = 'base16_ocean' "Good
+let g:airline_theme = 'base16_ocean' "Good
 " let g:airline_theme = 'base16_oceanicnext' "Nooo
 " let g:airline_theme = 'base16_one_light'
 " let g:airline_theme = 'base16_onedark'
@@ -221,7 +221,7 @@ set noshowmode
 " let g:airline_theme = 'lessnoise' "Nice one
 " let g:airline_theme = 'light'
 " let g:airline_theme = 'lighthaus' "ok
-let g:airline_theme = 'lucius' "Not bad
+" let g:airline_theme = 'lucius' "Not bad
 " let g:airline_theme = 'luna' "Nice green
 " let g:airline_theme = 'minimalist'
 " let g:airline_theme = 'molokai'

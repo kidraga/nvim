@@ -1,5 +1,5 @@
-" Toggle nerd tree
-nmap <leader>nt :NERDTreeToggle<CR>
+" Toggle nerd tree and move cursor to current file
+nnoremap <expr> <leader>nt g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTree<CR>' : ':NERDTreeFind<CR>'
 
 " Quit vim when nerd tree is the only window left.
 " autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
