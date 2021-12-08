@@ -63,3 +63,6 @@ source $HOME/.config/nvim/plug-config/indentLine.vim
 source $HOME/.config/nvim/plug-config/fugitive.vim
 " vim_current_word
 source $HOME/.config/nvim/plug-config/vim_current_word.vim
+" close tag
+source $HOME/.config/nvim/plug-config/vim-clostag.vim
+

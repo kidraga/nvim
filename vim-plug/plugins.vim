@@ -90,4 +90,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     
     " Indentation
     Plug 'Yggdroot/indentLine'
+
+    Plug 'alvan/vim-closetag'
 call plug#end()
