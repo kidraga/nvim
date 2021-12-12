@@ -57,3 +57,7 @@ inoremap ? ?<c-g>u
 
 " Quick save
 nnoremap FF :update<CR>
+
+inoremap jk <ESC>
+inoremap kj <ESC>
+
