@@ -46,7 +46,9 @@ nnoremap Y y$
 " Keep cursor centered
 nnoremap n nzzzv
 nnoremap N Nzzzv
-nnoremap J mzJ`z
+nnoremap j jzz
+nnoremap k kzz
+nnoremap G Gzz
 
 " Undo won't delete whole line, but will stop at below sign.
 " Add any sign you like.
