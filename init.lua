@@ -12,4 +12,5 @@ require('settings')
 
 -- set color scheme
 vim.o.background = "dark"
+require('theme')
 -- vim.cmd('colorscheme hybrid')

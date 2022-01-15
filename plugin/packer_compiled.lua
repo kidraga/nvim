@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/Users/zheluo/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["material.nvim"] = {
+    loaded = true,
+    path = "/Users/zheluo/.local/share/nvim/site/pack/packer/start/material.nvim",
+    url = "https://github.com/marko-cerovac/material.nvim"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/Users/zheluo/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
@@ -128,6 +133,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/zheluo/.local/share/nvim/site/pack/packer/start/nvim-comment",
     url = "https://github.com/terrortylor/nvim-comment"
+  },
+  ["nvim-hybrid"] = {
+    loaded = true,
+    path = "/Users/zheluo/.local/share/nvim/site/pack/packer/start/nvim-hybrid",
+    url = "https://github.com/PHSix/nvim-hybrid"
   },
   ["nvim-lsp-installer"] = {
     loaded = true,
@@ -160,21 +170,25 @@ _G.packer_plugins = {
     path = "/Users/zheluo/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
+  onehalf = {
+    loaded = true,
+    path = "/Users/zheluo/.local/share/nvim/site/pack/packer/start/onehalf",
+    url = "https://github.com/sonph/onehalf"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/zheluo/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  ["plastic.vim"] = {
+    loaded = true,
+    path = "/Users/zheluo/.local/share/nvim/site/pack/packer/start/plastic.vim",
+    url = "https://github.com/flrnd/plastic.vim"
+  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/Users/zheluo/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
-  },
-  ["rose-pine"] = {
-    config = { "\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0" },
-    loaded = true,
-    path = "/Users/zheluo/.local/share/nvim/site/pack/packer/start/rose-pine",
-    url = "https://github.com/rose-pine/neovim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -199,10 +213,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: rose-pine
-time([[Config for rose-pine]], true)
-try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine")
-time([[Config for rose-pine]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14nvim-tree\frequire\0", "config", "nvim-tree.lua")

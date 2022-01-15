@@ -9,14 +9,6 @@ return require('packer').startup(function()
   
   -- Theme
   use 'w0ng/vim-hybrid'
-  use({
-    'rose-pine/neovim',
-    as = 'rose-pine',
-    tag = 'v0.1.0', -- Optional tag release
-    config = function()
-        vim.cmd('colorscheme rose-pine')
-    end
-  })
 
   -- Treesitter
   use {'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
