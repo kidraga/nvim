@@ -1,2 +1,2 @@
 autoload/*
-plugin/packer_complied.lua
+plugin/*
