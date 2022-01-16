@@ -44,8 +44,14 @@ vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', {noremap = true, si
 map('n', '<leader>f', ':Telescope find_files<CR>', {noremap = true})
 map('n', '<leader>r', ':Telescope live_grep<CR>', {noremap = true})
 map('n', '<leader>u', ':Telescope reuse<CR>', {noremap = true}) -- get back to previous search
-map('n', '<leader>b', ':Telescope buffer<CR>', {noremap = true})
+map('n', '<leader>b', ':Telescope buffers<CR>', {noremap = true})
 
 -- Comment
 vim.api.nvim_set_keymap('n', '<C-_>', ':CommentToggle<CR>', {noremap = true}) -- <C-_> is ctrl+/ in vim
 vim.api.nvim_set_keymap('v', '<C-_>', ":'<,'>CommentToggle<CR>", {noremap = true})
+
+-- Close buffer
+map('n', '<leader>x', ':bp|bd #<CR>', {noremap = true, silent = true})
+
+-- hop
+map('n', '<leader><leader>w', ':HopWord<CR>', {noremap = true, silent = true})

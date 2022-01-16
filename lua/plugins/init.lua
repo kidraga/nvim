@@ -9,6 +9,7 @@ return require('packer').startup(function()
   
   -- Theme
   use 'w0ng/vim-hybrid'
+  use {'kristijanhusak/vim-hybrid-material'}
 
   -- Treesitter
   use {'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
@@ -18,13 +19,6 @@ return require('packer').startup(function()
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
-  -- Airline
-  -- use {
-  --   'vim-airline/vim-airline'
-  -- }
-  -- use {
-  --   'vim-airline/vim-airline-themes'
-  -- }
 
   -- Bufferline
   use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
@@ -81,70 +75,24 @@ return require('packer').startup(function()
   -- lsp installer
   use {'williamboman/nvim-lsp-installer'}
 
+  -- Find project root by .git file
+  use {'airblade/vim-rooter'}
 
-  -- Simple plugins can be specified as strings
-  -- use '9mm/vim-closer'
+  use {'phaazon/hop.nvim'}
 
-  -- Lazy loading:
-  -- Load on specific commands
-  -- use {'tpope/vim-dispatch', opt = true, cmd = {'Dispatch', 'Make', 'Focus', 'Start'}}
+  -- better search highlight
+  use {'romainl/vim-cool'}
 
-  -- Load on an autocommand event
-  -- use {'andymass/vim-matchup', event = 'VimEnter'}
+  -- highlight current word under cursor
+  use {'dominikduda/vim_current_word'}
 
-  -- Load on a combination of conditions: specific filetypes or commands
-  -- Also run code after load (see the "config" key)
-  -- use {
-  --   'w0rp/ale',
-  --   ft = {'sh', 'zsh', 'bash', 'c', 'cpp', 'cmake', 'html', 'markdown', 'racket', 'vim', 'tex'},
-  --   cmd = 'ALEEnable',
-  --   config = 'vim.cmd[[ALEEnable]]'
-  -- }
+  -- React and jsx
+  use 'yuezk/vim-js'
+  use 'maxmellon/vim-jsx-pretty'
 
-  -- Plugins can have dependencies on other plugins
-  -- use {
-  --   'haorenW1025/completion-nvim',
-  --   opt = true,
-  --   requires = {{'hrsh7th/vim-vsnip', opt = true}, {'hrsh7th/vim-vsnip-integ', opt = true}}
-  -- }
-
-  -- Plugins can also depend on rocks from luarocks.org:
-  -- use {
-  --   'my/supercoolplugin',
-  --   rocks = {'lpeg', {'lua-cjson', version = '2.1.0'}}
-  -- }
-
-  -- You can specify rocks in isolation
-  -- use_rocks 'penlight'
-  -- use_rocks {'lua-resty-http', 'lpeg'}
-
-  -- Local plugins can be included
-  -- use '~/projects/personal/hover.nvim'
-
-  -- Plugins can have post-install/update hooks
-  -- use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
-
-  -- Post-install/update hook with neovim command
-  -- use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-
-  -- Post-install/update hook with call of vimscript function with argument
-  -- use { 'glacambre/firenvim', run = function() vim.fn['firenvim#install'](0) end }
-
-  -- Use specific branch, dependency and run lua file after load
-  -- use {
-  --   'glepnir/galaxyline.nvim', branch = 'main', config = function() require'statusline' end,
-  --   requires = {'kyazdani42/nvim-web-devicons'}
-  -- }
-
-  -- Use dependency and run lua function after load
-  -- use {
-  --   'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' },
-  --   config = function() require('gitsigns').setup() end
-  -- }
-
-  -- You can specify multiple plugins in a single call
-  -- use {'tjdevries/colorbuddy.vim', {'nvim-treesitter/nvim-treesitter', opt = true}}
-
-  -- You can alias plugin names
-  -- use {'dracula/vim', as = 'dracula'}
+  -- Markdown support
+  -- save pic in markdown. Need to install xclip first
+  use 'ferrine/md-img-paste.vim'
+  -- markdown preview
+  use {'iamcco/markdown-preview.nvim',  run = ':call mkdp#util#install()'}
 end)
