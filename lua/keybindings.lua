@@ -41,7 +41,7 @@ map('i', 'kj', '<ESC>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 
 -- Telescope
-map('n', '<leader>f', ':Telescope find_files<CR>', {noremap = true})
+map('n', '<C-f>', ':Telescope find_files<CR>', {noremap = true})
 map('n', '<leader>r', ':Telescope live_grep<CR>', {noremap = true})
 map('n', '<leader>u', ':Telescope reuse<CR>', {noremap = true}) -- get back to previous search
 map('n', '<leader>b', ':Telescope buffers<CR>', {noremap = true})

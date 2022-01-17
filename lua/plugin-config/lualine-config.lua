@@ -129,14 +129,31 @@ ins_left({
 -- })
 
 ins_left({
-  'filename',
-  cond = conditions.buffer_not_empty,
-  color = { fg = colors.green, gui = 'bold' },
+  'branch',
+  icon = '',
+  color = { fg = colors.violet },
 })
 
-ins_left({ 'location' })
+ins_left({
+  'diff',
+  -- Is it me or the symbol for modified us really weird
+  symbols = { added = ' ', modified = '柳 ', removed = ' ' },
+  diff_color = {
+    added = { fg = colors.green },
+    modified = { fg = colors.orange },
+    removed = { fg = colors.red },
+  },
+  cond = conditions.hide_in_width,
+})
 
-ins_left({ 'progress', color = { fg = colors.fg, gui = 'bold' } })
+-- ins_left({
+--   'filename',
+--   cond = conditions.buffer_not_empty,
+--   color = { fg = colors.green, gui = 'bold' },
+-- })
+-- 
+
+-- ins_left({ 'progress', color = { fg = colors.fg, gui = 'bold' } })
 
 ins_left({
   'diagnostics',
@@ -176,10 +193,11 @@ ins_left({
   end,
   icon = ' LSP:',
   -- color = { fg = '#ffffff', gui = 'bold' },
-  color = { fg = '#ffffff' },
+  color = { fg = '#bbbbbb' },
 })
 
 -- Add components to right sections
+ins_right({ 'location' })
 ins_right({
   'o:encoding', -- option component same as &encoding in viml
   fmt = string.upper, -- I'm not sure why it's upper case either ;)
@@ -192,24 +210,6 @@ ins_right({
   fmt = string.upper,
   icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
   color = { fg = colors.green, gui = 'bold' },
-})
-
-ins_right({
-  'branch',
-  icon = '',
-  color = { fg = colors.violet },
-})
-
-ins_right({
-  'diff',
-  -- Is it me or the symbol for modified us really weird
-  symbols = { added = ' ', modified = '柳 ', removed = ' ' },
-  diff_color = {
-    added = { fg = colors.green },
-    modified = { fg = colors.orange },
-    removed = { fg = colors.red },
-  },
-  cond = conditions.hide_in_width,
 })
 
 -- ins_right({
