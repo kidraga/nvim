@@ -10,6 +10,7 @@ return require('packer').startup(function()
   -- Theme
   use 'w0ng/vim-hybrid'
   use {'kristijanhusak/vim-hybrid-material'}
+  use {'ulwlu/elly.vim'}
 
   -- Treesitter
   use {'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
