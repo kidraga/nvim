@@ -55,3 +55,6 @@ map('n', '<leader>x', ':bp|bd #<CR>', {noremap = true, silent = true})
 
 -- hop
 map('n', '<leader><leader>w', ':HopWord<CR>', {noremap = true, silent = true})
+
+-- Open CHADTree
+map('n', '<C-n>', ':CHADopen<CR>', {noremap = true, silent = true})

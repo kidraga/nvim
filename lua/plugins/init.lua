@@ -11,6 +11,7 @@ return require('packer').startup(function()
   use 'w0ng/vim-hybrid'
   use {'kristijanhusak/vim-hybrid-material'}
   use {'ulwlu/elly.vim'}
+  use {'lighthaus-theme/vim-lighthaus'}
 
   -- Treesitter
   use {'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
@@ -25,13 +26,15 @@ return require('packer').startup(function()
   use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
 
   -- Nvim tree
-  use {
-    'kyazdani42/nvim-tree.lua',
-    requires = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icon
-    },
-    config = function() require'nvim-tree'.setup {} end
-}
+  -- use {
+  --   'kyazdani42/nvim-tree.lua',
+  --   requires = {
+  --     'kyazdani42/nvim-web-devicons', -- optional, for file icon
+  --   },
+  --   config = function() require'nvim-tree'.setup {} end
+  -- }
+  use {'ms-jpq/chadtree', branch = 'chad', run = ':chaddeps'}
+
 
   -- ts tag auto-close
   use {'windwp/nvim-ts-autotag'}
@@ -39,7 +42,7 @@ return require('packer').startup(function()
   -- auto pair
   use {'windwp/nvim-autopairs'}
 
-  -- Telescope
+  -- telescope
   use {
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
