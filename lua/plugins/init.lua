@@ -26,14 +26,14 @@ return require('packer').startup(function()
   use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
 
   -- Nvim tree
-  -- use {
-  --   'kyazdani42/nvim-tree.lua',
-  --   requires = {
-  --     'kyazdani42/nvim-web-devicons', -- optional, for file icon
-  --   },
-  --   config = function() require'nvim-tree'.setup {} end
-  -- }
-  use {'ms-jpq/chadtree', branch = 'chad', run = ':chaddeps'}
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icon
+    },
+    config = function() require'nvim-tree'.setup {} end
+  }
+  -- use {'ms-jpq/chadtree', branch = 'chad', run = ':chaddeps'}
 
 
   -- ts tag auto-close
@@ -49,14 +49,15 @@ return require('packer').startup(function()
   }
 
   -- nvim-cmp
-  use {'neovim/nvim-lspconfig'}
-  use {'hrsh7th/cmp-nvim-lsp'}
-  use {'hrsh7th/cmp-buffer'}
-  use {'hrsh7th/cmp-path'}
-  use {'hrsh7th/cmp-cmdline'}
   use {'hrsh7th/nvim-cmp'}
+  use {'neovim/nvim-lspconfig'}
+  use {'hrsh7th/cmp-nvim-lsp'} -- auto import, snippets
+  use {'hrsh7th/cmp-buffer'}
+  use {'hrsh7th/cmp-path'} -- auto complete file path
+  use {'hrsh7th/cmp-cmdline'}
   use {'hrsh7th/cmp-vsnip'}
   use {'hrsh7th/vim-vsnip'}
+  use {'onsails/lspkind-nvim'}
 
   -- gitsigns
   use {
@@ -99,4 +100,6 @@ return require('packer').startup(function()
   use 'ferrine/md-img-paste.vim'
   -- markdown preview
   use {'iamcco/markdown-preview.nvim',  run = ':call mkdp#util#install()'}
+
+  use {'mfussenegger/nvim-jdtls'}
 end)

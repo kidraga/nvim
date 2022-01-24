@@ -57,4 +57,9 @@ map('n', '<leader>x', ':bp|bd #<CR>', {noremap = true, silent = true})
 map('n', '<leader><leader>w', ':HopWord<CR>', {noremap = true, silent = true})
 
 -- Open CHADTree
-map('n', '<C-n>', ':CHADopen<CR>', {noremap = true, silent = true})
+-- map('n', '<C-n>', ':CHADopen<CR>', {noremap = true, silent = true})
+
+-- LSP
+map('n', 'gd', '<cmd>lua vim.lsp.buf.type_definition()<CR>', {noremap = true, silent = true})
+
+

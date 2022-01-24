@@ -4,11 +4,11 @@ require('telescope').setup({
         layout_config = {
             width = 0.75,
             prompt_position = "bottom",
-            preview_cutoff = 120,
+            preview_cutoff = 120, -- if width of window (columns) are less than this, don't show preview
             horizontal = {mirror = false},
             vertical = {mirror = false},
         },
-        layout_strategy = "horizontal",
+        layout_strategy = "bottom_pane",
         find_conmmand = {
             'rg', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case'
         },

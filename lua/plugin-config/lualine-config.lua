@@ -46,7 +46,7 @@ local config = {
       normal = { c = { fg = colors.fg, bg = colors.bg } },
       inactive = { c = { fg = colors.fg, bg = colors.bg } },
     },
-    disabled_filetypes = {'CHADTree'} -- :set ft? to see current filetype
+    disabled_filetypes = {'CHADTree', 'NvimTree'} -- :set ft? to see current filetype
   },
   sections = {
     -- these are to remove the defaults
