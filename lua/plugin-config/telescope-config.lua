@@ -32,3 +32,12 @@ require('telescope').setup({
         }
     }
 })
+
+-- Set telescope search root directory to nvim arg, like "nvim ./"
+_G.open_telescope = function()
+    local first_arg = vim.v.argv[2]
+    if first_arg and vim.fn.isdirectory(first_arg) == 1 then
+        vim.g.loaded_netrw = true
+        require("telescope.builtin").find_files({search_dirs = {first_arg}})
+    end
+end
