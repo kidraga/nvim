@@ -33,7 +33,7 @@ cmp.setup {
       -- }),
       ['<CR>'] = cmp.mapping.confirm({
         behavior = cmp.ConfirmBehavior.Insert,
-        select = true 
+        select = true
       }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
       -- Control how to select completion. Tab to move down, shift tab to move up, enter to select
       ["<Tab>"] = cmp.mapping(function(fallback)

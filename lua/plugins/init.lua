@@ -102,4 +102,8 @@ return require('packer').startup(function()
   use {'iamcco/markdown-preview.nvim',  run = ':call mkdp#util#install()'}
 
   use {'mfussenegger/nvim-jdtls'}
+
+  use {'ms-jpq/coq_nvim', branch = 'coq'}
+  use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
+  use {'ms-jpq/coq.thirdparty', branch = '3p'}
 end)
