@@ -41,8 +41,9 @@ map('i', 'kj', '<ESC>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 
 -- Telescope
-map('n', '<C-f>', ':Telescope find_files<CR>', {noremap = true})
-map('n', '<leader>r', ':Telescope live_grep<CR>', {noremap = true})
+local cwd = vim.fn['getcwd']()
+map('n', '<C-f>', string.format(':lua require("telescope.builtin").find_files({cwd = "%s"})<CR>', cwd), {noremap = true})
+map('n', '<leader>r', string.format(':lua require("telescope.builtin").live_grep({cwd = "%s"})<CR>', cwd), {noremap = true, silent = true})
 map('n', '<leader>u', ':Telescope reuse<CR>', {noremap = true}) -- get back to previous search
 map('n', '<leader>b', ':Telescope buffers<CR>', {noremap = true})
 
