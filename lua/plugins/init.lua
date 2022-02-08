@@ -12,6 +12,7 @@ return require('packer').startup(function()
   use {'kristijanhusak/vim-hybrid-material'}
   use {'ulwlu/elly.vim'}
   use {'lighthaus-theme/vim-lighthaus'}
+  use {'EdenEast/nightfox.nvim'}
 
   -- Treesitter
   use {'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
