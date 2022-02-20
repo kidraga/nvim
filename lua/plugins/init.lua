@@ -13,6 +13,9 @@ return require('packer').startup(function()
   use {'ulwlu/elly.vim'}
   use {'lighthaus-theme/vim-lighthaus'}
   use {'EdenEast/nightfox.nvim'}
+  use {'adisen99/apprentice.nvim'}
+  use {'jonathanfilip/vim-lucius'}
+  use {'haystackandroid/snow'}
 
   -- Treesitter
   use {'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
