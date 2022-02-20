@@ -1,9 +1,21 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
+local fn = vim.fn
 
--- Only required if you have packer configured as `opt`
--- vim.cmd [[packadd packer.nvim]]
+-- Autocommand that reloads neovim whenever you save this file
+vim.cmd[[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost init.lua source <afile> | PackerSync
+  augroup end
+]]
 
-return require('packer').startup(function()
+-- safe load packer
+local status_ok, packer = pcall(require, "packer")
+if not status_ok then
+  print("Failed loading packer. Probably not installed.")
+  return
+end
+
+return packer.startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
   
