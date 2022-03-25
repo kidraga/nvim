@@ -28,6 +28,7 @@ return packer.startup(function()
   use {'adisen99/apprentice.nvim'}
   use {'jonathanfilip/vim-lucius'}
   use {'haystackandroid/snow'}
+  use {'rebelot/kanagawa.nvim'}
 
   -- Treesitter
   use {'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}

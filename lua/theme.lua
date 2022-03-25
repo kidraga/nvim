@@ -14,4 +14,4 @@ vim.o.background = "dark"
 -- vim.cmd[[highlight Comment ctermfg=100 guifg=#CCCCCC]]
 
 -- Nightfox
-vim.cmd 'colorscheme nordfox'
+vim.cmd 'colorscheme kanagawa'
