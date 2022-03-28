@@ -62,5 +62,9 @@ map('n', '<leader><leader>w', ':HopWord<CR>', {noremap = true, silent = true})
 
 -- LSP
 map('n', 'gd', '<cmd>lua vim.lsp.buf.type_definition()<CR>', {noremap = true, silent = true})
-
+local opts = { noremap=true, silent=true }
+map('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
+map('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
+map('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
+map('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
 
