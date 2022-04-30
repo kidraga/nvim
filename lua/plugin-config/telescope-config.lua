@@ -1,3 +1,4 @@
+-- https://www.bilibili.com/video/BV1P34y1e7SF
 local actions = require('telescope.actions')
 require('telescope').setup({
     defaults = {
@@ -23,11 +24,16 @@ require('telescope').setup({
                 ["<C-q>"] = actions.smart_send_to_qflist + actions.open_qflist,
                 ["<esc>"] = actions.close,
                 -- ["<CR>"] = actions.select_default + actions.center
+                ["<C-u>"] = actions.preview_scrolling_up,
+                ["<C-d>"] = actions.preview_scrolling_down,
+                ["<C-n>"] = actions.cycle_history_next,
+                ["<C-p>"] = actions.cycle_history_prev,
             },
             n = {
                 ["<C-j>"] = actions.move_selection_next,
                 ["<C-k>"] = actions.move_selection_previous,
-                ["<C-q>"] = actions.smart_send_to_qflist + actions.open_qflist
+                ["<C-q>"] = actions.smart_send_to_qflist + actions.open_qflist,
+                ["?"] = actions.which_key,
             }
         }
     }

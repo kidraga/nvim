@@ -1,3 +1,4 @@
+-- https://www.bilibili.com/video/BV1qT4y1a7tw
 vim.g.completeopt="menu,menuone,noinsert"
 -- Example keybindings can be found in https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings
 local has_words_before = function()
@@ -62,10 +63,13 @@ cmp.setup {
       -- { name = 'ultisnips' }, -- For ultisnips users.
       -- { name = 'snippy' }, -- For snippy users.
       { name = 'buffer' }, -- at least type 3 char before showing auto-comp from buffer
-  }, {
+      { name = 'path' },
+  }, { -- fallback source
       { name = 'buffer' },
+      { name = 'path' },
   }),
   formatting = {
+    fields = { "kind", "abbr", "menu" }, -- icon, abbr, menu
     format = lspkind.cmp_format({
       with_text = true, -- do not show text alongside icons
       maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
@@ -74,7 +78,24 @@ cmp.setup {
           nvim_lsp = "[LSP]",
           luasnip = "[LuaSnip]",
           nvim_lua = "[Lua]",
+          path = "[Path]",
       })
     })
   }
 }
+
+-- Use buffer text for completion when searching with '/'
+cmp.setup.cmdline('/', {
+  sources = {
+    { name = 'buffer' }
+  }
+})
+
+-- Enable commmand line completion when you type ':'
+cmp.setup.cmdline(':', {
+  sources = cmp.config.sources({
+    { name = 'cmdline' }
+  }, {
+    { name = 'path' }
+  })
+})
