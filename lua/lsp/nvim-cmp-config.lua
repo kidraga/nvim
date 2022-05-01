@@ -32,6 +32,8 @@ cmp.setup {
       --   i = cmp.mapping.abort(),
       --   c = cmp.mapping.close(),
       -- }),
+      ['<C-j>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }),
+      ['<C-k>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 'c' }),
       ['<CR>'] = cmp.mapping.confirm({
         behavior = cmp.ConfirmBehavior.Insert,
         select = true
@@ -47,14 +49,14 @@ cmp.setup {
           else
             fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
           end
-        end, { "i", "s" }),
+        end, { "i", "s", "c" }),
         ["<S-Tab>"] = cmp.mapping(function()
           if cmp.visible() then
             cmp.select_prev_item()
           elseif vim.fn["vsnip#jumpable"](-1) == 1 then
             feedkey("<Plug>(vsnip-jump-prev)", "")
           end
-        end, { "i", "s" }),
+        end, { "i", "s", "c" }),
   },
   sources = cmp.config.sources({
       { name = 'nvim_lsp' },

@@ -117,6 +117,8 @@ return packer.startup(function()
   use 'ferrine/md-img-paste.vim'
   -- markdown preview
   use {'iamcco/markdown-preview.nvim',  run = ':call mkdp#util#install()'}
+  -- code block syntax highlight
+  use {'preservim/vim-markdown'}
 
   use {'mfussenegger/nvim-jdtls'}
 
