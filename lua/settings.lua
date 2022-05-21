@@ -1,8 +1,8 @@
 vim.o.syntax = "enable" --Enables syntax highlighing
 vim.o.hidden = true --Required to keep multiple buffers open multiple buffers
 vim.o.wrap = true --Display long lines as just one line
-vim.o.sidescroll = 999 -- How many columns to pop in each scroll.
-vim.o.scrolloff = 999 -- Keep 10 lines below and above the cursor
+vim.o.sidescroll = 20 -- How many columns to pop in each scroll.
+vim.o.scrolloff = 10 -- Keep 10 lines below and above the cursor
 vim.o.encoding = "utf-8" --The encoding displayed
 -- vim.o.pumheight=10                        --Makes popup menu smaller
 vim.o.fileencoding = "utf-8" --The encoding written to file
