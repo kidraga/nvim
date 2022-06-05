@@ -15,7 +15,7 @@ if not status_ok then
   return
 end
 
-return packer.startup(function()
+return packer.startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
   
@@ -125,4 +125,7 @@ return packer.startup(function()
   use {'ms-jpq/coq_nvim', branch = 'coq'}
   use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
   use {'ms-jpq/coq.thirdparty', branch = '3p'}
+
+  use {'tpope/vim-repeat'}
+  use {'tpope/vim-surround'}
 end)
