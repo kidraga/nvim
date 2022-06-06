@@ -51,7 +51,7 @@ local config = {
   sections = {
     -- these are to remove the defaults
     lualine_a = {
-      'mode',
+      -- 'mode',
 
     },
     lualine_b = {},
@@ -81,6 +81,12 @@ end
 local function ins_right(component)
   table.insert(config.sections.lualine_x, component)
 end
+
+ins_left({
+  'mode',
+  color = { fg = colors.fg, bg = colors.bg },
+  padding = { left = 1, right = 1 }, -- We don't need space before this
+})
 
 ins_left({
   function()
@@ -152,20 +158,8 @@ ins_left({
 --   cond = conditions.buffer_not_empty,
 --   color = { fg = colors.green, gui = 'bold' },
 -- })
--- 
 
 -- ins_left({ 'progress', color = { fg = colors.fg, gui = 'bold' } })
-
-ins_left({
-  'diagnostics',
-  sources = { 'nvim_diagnostic' },
-  symbols = { error = ' ', warn = ' ', info = ' ' },
-  diagnostics_color = {
-    color_error = { fg = colors.red },
-    color_warn = { fg = colors.yellow },
-    color_info = { fg = colors.cyan },
-  },
-})
 
 -- Insert mid section. You can make any number of sections in neovim :)
 -- for lualine it's any number greater then 2
@@ -176,9 +170,26 @@ ins_left({
 })
 
 ins_left({
+  'filename',
+  file_status = true,
+  path = 1,
+})
+
+ins_right({
+  'diagnostics',
+  sources = { 'nvim_diagnostic' },
+  symbols = { error = ' ', warn = ' ', info = ' ' },
+  diagnostics_color = {
+    color_error = { fg = colors.red },
+    color_warn = { fg = colors.yellow },
+    color_info = { fg = colors.cyan },
+  },
+})
+
+ins_right({
   -- Lsp server name .
   function()
-    local msg = 'No Active Lsp'
+    local msg = 'No Lsp'
     local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
     local clients = vim.lsp.get_active_clients()
     if next(clients) == nil then
@@ -192,7 +203,7 @@ ins_left({
     end
     return msg
   end,
-  icon = ' LSP:',
+  icon = ':',
   -- color = { fg = '#ffffff', gui = 'bold' },
   color = { fg = '#bbbbbb' },
 })
@@ -206,12 +217,12 @@ ins_right({
   color = { fg = colors.green, gui = 'bold' },
 })
 
-ins_right({
-  'fileformat',
-  fmt = string.upper,
-  icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
-  color = { fg = colors.green, gui = 'bold' },
-})
+-- ins_right({
+--   'fileformat',
+--   fmt = string.upper,
+--   icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
+--   color = { fg = colors.green, gui = 'bold' },
+-- })
 
 -- ins_right({
 --   function()
