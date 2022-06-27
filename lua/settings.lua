@@ -45,3 +45,4 @@ vim.o.termguicolors = true
 -- --You can't stop me
 -- cmap w!! w !sudo tee %
 
+vim.api.nvim_create_user_command('Picker', 'luafile ~/.config/nvim/lua/picker/init.lua', {})

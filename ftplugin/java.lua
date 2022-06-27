@@ -18,6 +18,7 @@ if root_dir then
     file:close()
   end
 end
+-- local lsp = require("plugins.lspconfig")
 
 local config = {
   -- The command that starts the language server
@@ -40,7 +41,7 @@ local config = {
     '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
     '-jar', '/Library/Java/jdt-language-server-1.9.0-202203031534/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar',
     '-configuration', '/Library/Java/jdt-language-server-1.9.0-202203031534/config_mac/',
-    '-data', vim.fn.expand('~/.cache/jdtls-workspace') .. workspace_dir -- $1: put data in your project directory
+    '-data', vim.fn.expand('~/.cache/jdtls-workspace/') .. workspace_dir -- $1: put data in your project directory
   },
 
   -- 💀

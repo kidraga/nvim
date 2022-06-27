@@ -35,7 +35,6 @@ map('n', 'N', 'Nzzzv', {noremap = true})
 -- Quick save
 map('n', 'FF', ':update<CR>', {noremap = true})
 
-map('i', 'jk', '<ESC>', {noremap = true})
 map('i', 'kj', '<ESC>', {noremap = true})
 
 -- Nvim tree toggle
@@ -69,4 +68,4 @@ map('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', noreSilentOpt)
 map('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', noreSilentOpt)
 
 -- replace word
-map('n', 'rw', 'ciw<C-r>0<Esc>', noreSilentOpt)
+map('n', 'rw', 'ciw<C-r>0<Esc>', noreSilentOpt) -- ctrl+r in insert mode is paste, following a register
