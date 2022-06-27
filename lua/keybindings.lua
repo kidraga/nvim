@@ -17,6 +17,8 @@ local noreSilentOpt = { noremap=true, silent=true }
 map('v', '<', '<gv', {noremap = true})
 map('v', '>', '>gv', {noremap = true})
 
+map('n', 'j', 'gj', {noremap = true})
+map('n', 'k', 'gk', {noremap = true})
 -- Better window navigation
 -- use ctrl+hjkl to navigate between windows
 map('n', '<C-h>', '<C-w>h', noreSilentOpt)
