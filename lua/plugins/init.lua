@@ -29,6 +29,13 @@ return packer.startup(function(use)
   use {'jonathanfilip/vim-lucius'}
   use {'haystackandroid/snow'}
   use {'rebelot/kanagawa.nvim'}
+  use {'sainnhe/everforest'}
+  use {'gkapfham/vim-vitamin-onec'}
+  use {'axvr/raider.vim'}
+
+  -- Colorizer
+  use {'norcalli/nvim-colorizer.lua'}
+
 
   -- Treesitter
   use {'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
