@@ -50,8 +50,8 @@ map('n', '<leader>u', ':Telescope reuse<CR>', {noremap = true}) -- get back to p
 map('n', '<leader>b', ':Telescope buffers<CR>', {noremap = true})
 
 -- Comment
-map('n', '<C-_>', ':CommentToggle<CR>', {noremap = true}) -- <C-_> is ctrl+/ in vim
-map('v', '<C-_>', ":'<,'>CommentToggle<CR>", {noremap = true})
+map('n', '<C-/>', ':CommentToggle<CR>', {noremap = true})
+map('v', '<C-/>', ":'<,'>CommentToggle<CR>", {noremap = true})
 
 -- Close buffer
 map('n', '<leader>x', ':bp|bd #<CR>', noreSilentOpt)

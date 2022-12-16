@@ -39,6 +39,12 @@ vim.o.signcolumn = "yes" --Sign column for git signs
 vim.o.clipboard = "unnamedplus" --Copy paste between vim and everything else. Yank in vim and cmd+v to paste
 vim.o.autochdir = true --Your working directory will always be the same as your working directory
 vim.o.termguicolors = true
+-- vim.o.guicursor="i:block-blinkon1-blinkoff1" -- see :h 'guicursor'
+
+-- for nvim-tree
+-- disable netrw at the very start of your init.lua (strongly advised)
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- au! BufWritePost $MYVIMRC source %      --auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 

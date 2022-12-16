@@ -190,7 +190,7 @@ ins_right({
 ins_right({
   -- Lsp server name .
   function()
-    local msg = 'No Lsp'
+    local msg = 'None'
     local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
     local clients = vim.lsp.get_active_clients()
     if next(clients) == nil then
@@ -204,7 +204,7 @@ ins_right({
     end
     return msg
   end,
-  icon = ':',
+  icon = 'LSP:',
   -- color = { fg = '#ffffff', gui = 'bold' },
   color = { fg = '#bbbbbb' },
 })

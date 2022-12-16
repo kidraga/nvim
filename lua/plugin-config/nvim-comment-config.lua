@@ -3,4 +3,13 @@ require('nvim_comment').setup({
   -- Use our own keybinding instead
   -- line_mapping = "<C-/>",
   -- operator_mapping = "<C-/>",
+  --
+  -- https://github.com/terrortylor/nvim-comment
+  -- should comment out empty or whitespace only lines
+  comment_empty = true,
+  -- trim empty comment whitespace
+  comment_empty_trim_whitespace = true,
+  -- Should key mappings be created
+  -- we are using our own keybinding. check keybindings.lua
+  create_mappings = false,
 })

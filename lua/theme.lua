@@ -29,17 +29,17 @@ augroup LighthaulsCustomize
   autocmd ColorScheme hybrid call LighthausOverride()
 augroup end
 ]])
-vim.cmd([[
-function! KanagawaOverride() abort
-  highlight CursorLineNr cterm=NONE,italic gui=NONE,italic guifg=#FF9E3B
-  highlight IndentBlankLineContextChar cterm=nocombine gui=nocombine guifg=#b97490
-endfunction
-
-augroup KanagawaCustomize
-  autocmd!
-  autocmd ColorScheme kanagawa call KanagawaOverride()
-augroup end
-]])
+-- vim.cmd([[
+-- function! KanagawaOverride() abort
+--   highlight CursorLineNr cterm=NONE,italic gui=NONE,italic guifg=#FF9E3B
+--   highlight IndentBlankLineContextChar cterm=nocombine gui=nocombine guifg=#b97490
+-- endfunction
+--
+-- augroup KanagawaCustomize
+--   autocmd!
+--   autocmd ColorScheme kanagawa call KanagawaOverride()
+-- augroup end
+-- ]])
 vim.cmd([[
 function! TerafoxOverride() abort
   highlight HopNextKey gui=bold,italic guifg=#ff007c
@@ -78,4 +78,13 @@ augroup end
 --   pattern = "hybrid",
 --   callback = hybridOverride
 -- })
-vim.cmd 'colorscheme hybrid'
+-- vim.cmd 'colorscheme hybrid'
+-- vim.cmd 'colorscheme raider'
+-- vim.cmd 'colorscheme nightFox'
+vim.cmd 'colorscheme kanagawa'
+
+-- vim.cmd([[
+-- autocmd InsertEnter * highlight Cursor ctermfg=Green ctermbg=NONE guifg=Green guibg=NONE
+-- autocmd InsertEnter * highlight lCursor ctermfg=Green ctermbg=NONE guifg=Green guibg=NONE
+-- ]])
+-- autocmd InsertLeave * highlight Cursor ctermfg=235 ctermbg=251 guifg=#222222 guibg=#C9C9C9

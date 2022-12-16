@@ -27,11 +27,13 @@ return packer.startup(function(use)
   use {'EdenEast/nightfox.nvim'}
   use {'adisen99/apprentice.nvim'}
   use {'jonathanfilip/vim-lucius'}
-  use {'haystackandroid/snow'}
   use {'rebelot/kanagawa.nvim'}
   use {'sainnhe/everforest'}
   use {'gkapfham/vim-vitamin-onec'}
   use {'axvr/raider.vim'}
+  use {'chriskempson/tomorrow-theme'}
+  use { 'folke/tokyonight.nvim' }
+  use({ 'rose-pine/neovim' })
 
   -- Colorizer
   use {'norcalli/nvim-colorizer.lua'}
@@ -39,6 +41,7 @@ return packer.startup(function(use)
 
   -- Treesitter
   use {'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
+  use {'nvim-treesitter/playground'}
 
   -- lualine
   use {
@@ -50,14 +53,8 @@ return packer.startup(function(use)
   use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
 
   -- Nvim tree
-  use {
-    'kyazdani42/nvim-tree.lua',
-    requires = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icon
-    },
-    config = function() require'nvim-tree'.setup {} end
-  }
-  -- use {'ms-jpq/chadtree', branch = 'chad', run = ':chaddeps'}
+  use { 'nvim-tree/nvim-tree.lua' }
+  use {'nvim-tree/nvim-web-devicons'}
 
 
   -- ts tag auto-close
