@@ -50,8 +50,8 @@ map('n', '<leader>u', ':Telescope reuse<CR>', {noremap = true}) -- get back to p
 map('n', '<leader>b', ':Telescope buffers<CR>', {noremap = true})
 
 -- Comment
-map('n', '<C-/>', ':CommentToggle<CR>', {noremap = true})
-map('v', '<C-/>', ":'<,'>CommentToggle<CR>", {noremap = true})
+map('n', '<C-_>', ':CommentToggle<CR>', {noremap = true})
+map('v', '<C-_>', ":'<,'>CommentToggle<CR>", {noremap = true})
 
 -- Close buffer
 map('n', '<leader>x', ':bp|bd #<CR>', noreSilentOpt)
@@ -63,7 +63,7 @@ map('n', '<leader><leader>w', ':HopWord<CR>', noreSilentOpt)
 -- map('n', '<C-n>', ':CHADopen<CR>', {noremap = true, silent = true})
 
 -- LSP
-map('n', 'gd', '<cmd>lua vim.lsp.buf.type_definition()<CR>', noreSilentOpt)
+-- map('n', 'gd', '<cmd>lua vim.lsp.buf.type_definition()<CR>', noreSilentOpt) -- using treesitter. see treesitter.lua
 map('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', noreSilentOpt)
 map('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', noreSilentOpt)
 map('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', noreSilentOpt)

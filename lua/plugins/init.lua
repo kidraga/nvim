@@ -11,14 +11,18 @@ vim.cmd[[
 -- safe load packer
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
-  print("Failed loading packer. Probably not installed.")
-  return
+  print("Failed loading packer. Probably not installed. Try to install packer now...")
+  local install_path = vim.fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
+  if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
+    vim.fn.execute('!git clone https://github.com/wbthomason/packer.nvim' .. install_path)
+    vim.cmd [[packadd packer.nvim]]
+    print("Successfully installed packer.")
+  end
 end
 
-return packer.startup(function(use)
+require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-  
   -- Theme
   use 'w0ng/vim-hybrid'
   use {'kristijanhusak/vim-hybrid-material'}
@@ -42,6 +46,7 @@ return packer.startup(function(use)
   -- Treesitter
   use {'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
   use {'nvim-treesitter/playground'}
+  use {'nvim-treesitter/nvim-treesitter-refactor'}
 
   -- lualine
   use {
