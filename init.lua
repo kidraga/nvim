@@ -10,5 +10,5 @@ require('lsp')
 -- load settings
 require('settings')
 
--- set color scheme
-require('theme')
+-- load default theme
+require('themes.kanagawa.init')
