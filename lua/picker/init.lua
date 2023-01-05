@@ -17,8 +17,8 @@ local mini = {
 }
 
 function config_exists(name)
-  local pwd = os.getenv("PWD")
-  local potential_scheme_config = pwd .. '/lua/themes/' .. name .. '/init.lua'
+  local home = os.getenv("HOME")
+  local potential_scheme_config = home .. '/.config/nvim/lua/themes/' .. name .. '/init.lua'
   local f = io.open(potential_scheme_config, "r")
   if f~=nil then io.close(f) return true else return false end
 end
