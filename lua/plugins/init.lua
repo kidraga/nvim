@@ -26,7 +26,7 @@ require('packer').startup(function(use)
   -- Theme
   use 'w0ng/vim-hybrid'
   use {'kristijanhusak/vim-hybrid-material'}
-  use {'ulwlu/elly.vim'}
+  use {'ulwlu/elly.vim', lock=true}
   use {'lighthaus-theme/vim-lighthaus'}
   use {'EdenEast/nightfox.nvim'}
   use {'adisen99/apprentice.nvim'}
@@ -38,6 +38,7 @@ require('packer').startup(function(use)
   use {'chriskempson/tomorrow-theme'}
   use { 'folke/tokyonight.nvim' }
   use({ 'rose-pine/neovim' })
+  use { 'bdesham/biogoo' }
 
   -- Colorizer
   use {'norcalli/nvim-colorizer.lua'}
@@ -55,7 +56,9 @@ require('packer').startup(function(use)
   }
 
   -- Bufferline
-  use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
+  use {'akinsho/bufferline.nvim',
+  requires = 'kyazdani42/nvim-web-devicons',
+  lock = true}
 
   -- Nvim tree
   use { 'nvim-tree/nvim-tree.lua' }
@@ -98,7 +101,7 @@ require('packer').startup(function(use)
   use {"lukas-reineke/indent-blankline.nvim"}
 
   -- terminal
-  use {"akinsho/toggleterm.nvim"}
+  use {"akinsho/toggleterm.nvim", lock=true}
 
   -- comment
   use {"terrortylor/nvim-comment"}

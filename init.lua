@@ -11,4 +11,4 @@ require('lsp')
 require('settings')
 
 -- load default theme
-require('themes.kanagawa.init')
+require('themes.biogoo.init')

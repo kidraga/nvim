@@ -1,9 +1,8 @@
+local set_hl = vim.api.nvim_set_hl
+vim.o.background='dark'
 vim.cmd([[colorscheme hybrid]])
-vim.cmd([[
-highlight GitSignsChange ctermfg=143 guifg=#81a2be
-highlight DiffAdd ctermfg=193 guifg=#d7ffaf
-highlight SignColumn guibg=000
-highlight clear Comment
-highlight Comment guifg=#888888
-]])
-
+set_hl(0, 'GitSignsChange', {fg='#81a2be', default=false})
+set_hl(0, 'DiffAdd', {fg='#d7ffaf', default=false})
+set_hl(0, 'SignColumn', {bg='NONE', default=false})
+set_hl(0, 'Comment', {fg='#888888', italic=true, default=false})
+require("themes.common")
