@@ -6,5 +6,7 @@ vim.cmd([[colorscheme biogoo]])
 set_hl(0, 'CursorLineNr', {italic=true, fg='#ffffff', bg='#0000ff', nocombine=true, default=false})
 set_hl(0, 'LineNr', {italic=false, fg='#303030', bg='#e5e5e5', nocombine=true, default=false, underline=false})
 set_hl(0, 'Type', {fg='#660066', italic=true, bold=false, default=false})
+set_hl(0, 'Comment', {fg='#999999', italic=true, bold=false, default=false})
+set_hl(0, "NvimTreeExecFile", {fg="#0000ff", bold=false})
 require("themes.common")
 -- cursor color may not work. iterm controls it, not highlight group

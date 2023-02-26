@@ -44,7 +44,7 @@ local config = {
       -- We are going to use lualine_c an lualine_x as left and
       -- right section. Both are highlighted by c theme .  So we
       -- are just setting default looks o statusline
-      normal = { c = { fg = colors.fg, bg = colors.cyan } },
+      normal = { c = { fg = colors.fg} },
       inactive = { c = { fg = colors.fg, bg = colors.lightgray } },
     },
     disabled_filetypes = {'CHADTree', 'NvimTree'} -- :set ft? to see current filetype
@@ -93,7 +93,7 @@ ins_left({
   function()
     return '▊'
   end,
-  color = { fg = colors.blue }, -- Sets highlighting of component
+  color = { fg = colors.cyan }, -- Sets highlighting of component
   padding = { left = 0, right = 1 }, -- We don't need space before this
 })
 
@@ -174,6 +174,7 @@ ins_left({
   'filename',
   file_status = true,
   path = 1,
+  color = { fg = colors.cyan }
 })
 
 ins_right({

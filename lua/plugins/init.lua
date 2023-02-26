@@ -39,6 +39,12 @@ require('packer').startup(function(use)
   use { 'folke/tokyonight.nvim' }
   use({ 'rose-pine/neovim' })
   use { 'bdesham/biogoo' }
+  use { 'barlog-m/oceanic-primal-vim' }
+  use { 'vim-scripts/tango-morning.vim' }
+  use { 'goatslacker/mango.vim' }
+  use { 'yuttie/inkstained-vim' }
+  use { 'aktersnurra/no-clown-fiesta.nvim' }
+  use { 'nikolvs/vim-sunbather' }
 
   -- Colorizer
   use {'norcalli/nvim-colorizer.lua'}
@@ -107,7 +113,7 @@ require('packer').startup(function(use)
   use {"terrortylor/nvim-comment"}
 
   -- lsp installer
-  use {'williamboman/nvim-lsp-installer'}
+  use {'williamboman/mason.nvim'}
 
   -- Find project root by .git file
   use {'airblade/vim-rooter'}

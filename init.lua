@@ -11,4 +11,4 @@ require('lsp')
 require('settings')
 
 -- load default theme
-require('themes.biogoo.init')
+require('themes.no-clown-fiesta.init')
