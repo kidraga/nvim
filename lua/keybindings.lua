@@ -1,6 +1,6 @@
 -- set leader key to space
 vim.g.mapleader = " "
-local map = vim.api.nvim_set_keymap
+local map = vim.keymap.set
 local noreSilentOpt = { noremap=true, silent=true }
 
 -- Use ctrl + shift + hjkl to resize windows
@@ -50,8 +50,10 @@ map('n', '<leader>u', ':Telescope reuse<CR>', {noremap = true}) -- get back to p
 map('n', '<leader>b', ':Telescope buffers<CR>', {noremap = true})
 
 -- Comment
-map('n', '<C-_>', ':CommentToggle<CR>', {noremap = true})
-map('v', '<C-_>', ":'<,'>CommentToggle<CR>", {noremap = true})
+-- map('n', '<C-/>', ':CommentToggle<CR>', {noremap = true})
+-- map('v', '<C-/>', ":'<,'>CommentToggle<CR>", {noremap = true})
+map('n', '<C-/>', 'gcc', {remap = true})
+map('v', '<C-/>', "gc", {remap = true})
 
 -- Close buffer
 map('n', '<leader>x', ':bp|bd #<CR>', noreSilentOpt)

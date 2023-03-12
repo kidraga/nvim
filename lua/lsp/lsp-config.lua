@@ -15,6 +15,8 @@ local lsp = require('lsp-zero').preset({
   manage_nvim_cmp = true,
   suggest_lsp_servers = false,
 })
+local import_luasnip, luasnip = pcall(require, 'LuaSnip')
+if not import_luasnip then return end
 
 lsp.ensure_installed({
   'tsserver',
@@ -32,37 +34,36 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
   --   i = cmp.mapping.abort(),
   --   c = cmp.mapping.close(),
   -- }),
-  ['<C-j>'] = cmp.mapping(cmp.mapping.select_next_item(cmp_select), { 'i', 'c' }),
-  ['<C-k>'] = cmp.mapping(cmp.mapping.select_prev_item(cmp_select), { 'i', 'c' }),
+  ['<C-j>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }),
+  ['<C-k>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 'c' }),
   ['<CR>'] = cmp.mapping.confirm({
-    behavior = cmp.ConfirmBehavior.Insert,
-    select = true
+    behavior = cmp.ConfirmBehavior.Insert, -- insert instead of replace the word. So it won't mess up anything after cursor
   }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
   -- Control how to select completion. Tab to move down, shift tab to move up, enter to select
   ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
-      elseif vim.fn["vsnip#available"](1) == 1 then
-        feedkey("<Plug>(vsnip-expand-or-jump)", "")
-      elseif has_words_before() then
-        cmp.complete()
+      elseif luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
       else
-        fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
+        fallback()
       end
     end, { "i", "s", "c" }),
-    ["<S-Tab>"] = cmp.mapping(function()
+    ["<S-Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
-      elseif vim.fn["vsnip#jumpable"](-1) == 1 then
-        feedkey("<Plug>(vsnip-jump-prev)", "")
+      elseif luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      else
+        fallback()
       end
     end, { "i", "s", "c" }),
 })
 
 local cmp_sources = cmp.config.sources({
     { name = 'nvim_lsp' },
-    { name = 'vsnip' }, -- For vsnip users.
-    -- { name = 'luasnip' }, -- For luasnip users.
+    -- { name = 'vsnip' }, -- For vsnip users.
+    { name = 'luasnip' }, -- For luasnip users.
     -- { name = 'ultisnips' }, -- For ultisnips users.
     -- { name = 'snippy' }, -- For snippy users.
     { name = 'buffer' }, -- at least type 3 char before showing auto-comp from buffer
@@ -102,9 +103,30 @@ cmp.setup.cmdline(':', {
   })
 })
 
+local lsp_config = require("lspconfig")
+
+lsp_config.solargraph.setup {
+    filetypes = {"ruby", "rakefile"},
+    root_dir = lsp_config.util.root_pattern("Gemfile", ".git", "."),
+    settings = {
+        solargraph = {
+            autoformat = true,
+            completion = true,
+            diagnostic = true,
+            folding = true,
+            references = true,
+            rename = true,
+            symbols = true
+        }
+    }
+}
 
 -- h: lsp-zero.setup_nvim_cmp
 lsp.setup_nvim_cmp({
+  preselect = 'none',
+  completion = {
+    completeopt = 'menu,menuone,noinsert,noselect'
+  },
   mapping = cmp_mappings,
   sources = cmp_sources,
   formatting = cmp_formatting,

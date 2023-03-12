@@ -11,5 +11,5 @@ require('nvim_comment').setup({
   comment_empty_trim_whitespace = true,
   -- Should key mappings be created
   -- we are using our own keybinding. check keybindings.lua
-  create_mappings = false,
+  -- create_mappings = false,
 })

@@ -85,28 +85,28 @@ require('packer').startup(function(use)
 
   -- lsp
   use {
-  'VonHeikemen/lsp-zero.nvim',
-  branch = 'v1.x',
-  requires = {
-    -- LSP Support
-    {'neovim/nvim-lspconfig'},             -- Required
-    {'williamboman/mason.nvim'},           -- Optional
-    {'williamboman/mason-lspconfig.nvim'}, -- Optional
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v1.x',
+    requires = {
+      -- LSP Support
+      {'neovim/nvim-lspconfig'},             -- Required
+      {'williamboman/mason.nvim'},           -- Optional
+      {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
-    -- Autocompletion
-    {'hrsh7th/nvim-cmp'},         -- Required
-    {'hrsh7th/cmp-nvim-lsp'},     -- Required
-    {'hrsh7th/cmp-buffer'},       -- Optional
-    {'hrsh7th/cmp-path'},         -- Optional
-    {'saadparwaiz1/cmp_luasnip'}, -- Optional
-    {'hrsh7th/cmp-nvim-lua'},     -- Optional
-    {'onsails/lspkind.nvim'},    -- Optional. Use it to create VSCode like icons stuff
+      -- Autocompletion
+      {'hrsh7th/nvim-cmp'},         -- Required
+      {'hrsh7th/cmp-nvim-lsp'},     -- Required
+      {'hrsh7th/cmp-buffer'},       -- Optional
+      {'hrsh7th/cmp-path'},         -- Optional
+      {'saadparwaiz1/cmp_luasnip'}, -- Optional
+      {'hrsh7th/cmp-nvim-lua'},     -- Optional
+      {'onsails/lspkind.nvim'},    -- Optional. Use it to create VSCode like icons stuff
 
-    -- Snippets
-    {'L3MON4D3/LuaSnip'},             -- Required
-    {'rafamadriz/friendly-snippets'}, -- Optional
+      -- Snippets
+      {'L3MON4D3/LuaSnip'},             -- Required
+      {'rafamadriz/friendly-snippets'}, -- Optional
+    }
   }
-}
 
   -- gitsigns
   use {
