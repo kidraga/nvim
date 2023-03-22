@@ -20,7 +20,6 @@ if not import_luasnip then return end
 
 lsp.ensure_installed({
   'tsserver',
-  'lua-lsp',
 })
 
 local cmp = require('cmp')
@@ -94,15 +93,11 @@ cmp.setup.cmdline('/', {
   }
 })
 
--- Enable commmand line completion when you type ':'
+-- `:` cmdline setup.
 cmp.setup.cmdline(':', {
-  sources = cmp.config.sources({
-    { name = 'cmdline' }
-  }, {
-    { name = 'path' }
-  })
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = cmp_sources,
 })
-
 local lsp_config = require("lspconfig")
 
 lsp_config.solargraph.setup {

@@ -1,8 +1,10 @@
 require("bufferline").setup{
     -- See all options: https://github.com/akinsho/bufferline.nvim
-    close_command = "bdelete! %d",       -- can be a string | function, see "Mouse actions"
-    middle_mouse_command = "bdelete! %d",          -- can be a string | function, see "Mouse actions"
-    separator_style = "thick"
+    options = {
+        close_command = "bdelete! %d",       -- can be a string | function, see "Mouse actions"
+        middle_mouse_command = "bdelete! %d",          -- can be a string | function, see "Mouse actions"
+        separator_style = "thick"
+    }
 }
 
 -- set key mappings for buffers

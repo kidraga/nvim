@@ -6,6 +6,9 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 local root_dir = require('jdtls.setup').find_root({'packageInfo'}, 'Config')
 -- local eclipse_workspace = home .. "/.local/share/eclipse/" .. vim.fn.fnamemodify(root_dir, ':p:h:t')
 
+-- Determine home
+local home = os.getenv("HOME")
+
 local ws_folders_lsp = {}
 local ws_folders_jdtls = {}
 if root_dir then
@@ -26,21 +29,26 @@ local config = {
   cmd = {
     -- command to start the jdtls server
     -- refer to https://github.com/eclipse/eclipse.jdt.ls#running-from-the-command-line
-    '/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/bin/java',
     -- 'java', -- or '/path/to/java11_or_newer/bin/java'
             -- depends on if `java` is in your $PATH env variable and if it points to the right version.
+    'java',
+    -- vim.fn.glob(home .. "/.local/share/nvim/jdtls/bin/jdtls"),
+    -- home .. "/.local/share/nvim/jdtls/bin/jdtls",
+    -- '/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/bin/java',
+    -- '/Library/Java/jdt-language-server-1.19.0-202301171536/bin/jdtls',
 
     '-Declipse.application=org.eclipse.jdt.ls.core.id1',
     '-Dosgi.bundles.defaultStartLevel=4',
     '-Declipse.product=org.eclipse.jdt.ls.core.product',
     '-Dlog.level=ALL',
-    '-noverify',
     '-Xmx1G',
     '--add-modules=ALL-SYSTEM',
     '--add-opens', 'java.base/java.util=ALL-UNNAMED',
     '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
-    '-jar', '/Library/Java/jdt-language-server-1.9.0-202203031534/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar',
-    '-configuration', '/Library/Java/jdt-language-server-1.9.0-202203031534/config_mac/',
+    -- '-jar', '/Library/Java/jdt-language-server-1.9.0-202203031534/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar',
+    '-jar', vim.fn.glob(home .. '/.local/share/nvim/jdtls/plugins/org.eclipse.equinox.launcher_*.6.400.v20210924-0641.jar'),
+    -- '-configuration', '/Library/Java/jdt-language-server-1.9.0-202203031534/config_ss_mac/',
+    '-configuration', home .. '/.local/share/nvim/jdtls/config_mac',
     '-data', vim.fn.expand('~/.cache/jdtls-workspace/') .. workspace_dir -- $1: put data in your project directory
   },
 
@@ -90,7 +98,7 @@ vim.api.nvim_set_keymap('n', '<leader>wr', '<cmd>lua vim.lsp.buf.remove_workspac
 vim.api.nvim_set_keymap('n', '<leader>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))()<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
 -- vim.api.nvim_set_keymap('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts) -- see treesitter.lua
-vim.api.nvim_set_keymap('n', '<leader>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
+-- vim.api.nvim_set_keymap('n', '<leader>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
 vim.api.nvim_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
 vim.api.nvim_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
