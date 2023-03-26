@@ -51,4 +51,4 @@ vim.g.loaded_netrwPlugin = 1
 -- --You can't stop me
 -- cmap w!! w !sudo tee %
 
-vim.api.nvim_create_user_command('Picker', 'luafile ~/.config/nvim/lua/picker/init.lua', {})
+vim.api.nvim_create_user_command('Themes', 'luafile ~/.config/nvim/lua/picker/init.lua', {})
