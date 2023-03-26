@@ -73,3 +73,6 @@ map('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', noreSilentOpt)
 
 -- replace word
 map('n', 'rw', 'ciw<C-r>0<Esc>', noreSilentOpt) -- ctrl+r in insert mode is paste, following a register
+
+-- markdown
+map('n', '<leader>md', ':MarkdownPreviewToggle<CR>', noreSilentOpt)
