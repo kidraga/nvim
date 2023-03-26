@@ -44,7 +44,7 @@ map('n', '<C-n>', ':NvimTreeToggle<CR>', noreSilentOpt)
 
 -- Telescope
 local cwd = vim.fn['getcwd']()
-map('n', '<space>f', string.format(':lua require("telescope.builtin").find_files({cwd = "%s"})<CR>', cwd), {noremap = true})
+map('n', '<C-o>', string.format(':lua require("telescope.builtin").find_files({cwd = "%s"})<CR>', cwd), {noremap = true})
 map('n', '<leader>r', string.format(':lua require("telescope.builtin").live_grep({cwd = "%s"})<CR>', cwd), noreSilentOpt)
 map('n', '<leader>u', ':Telescope reuse<CR>', {noremap = true}) -- get back to previous search
 map('n', '<leader>b', ':Telescope buffers<CR>', {noremap = true})

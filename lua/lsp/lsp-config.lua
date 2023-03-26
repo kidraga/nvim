@@ -96,7 +96,11 @@ cmp.setup.cmdline('/', {
 -- `:` cmdline setup.
 cmp.setup.cmdline(':', {
   mapping = cmp.mapping.preset.cmdline(),
-  sources = cmp_sources,
+  sources = cmp.config.sources({
+    { name = 'cmdline' }
+  }, { -- fallback
+    { name = 'path' }
+  }),
 })
 local lsp_config = require("lspconfig")
 
@@ -168,6 +172,7 @@ vim.diagnostic.config({
   },
 })
 
+lsp.nvim_workspace()
 lsp.setup()
 
 -- Diagnostic signs

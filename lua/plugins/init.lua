@@ -26,7 +26,6 @@ require('packer').startup(function(use)
   -- Theme
   use 'w0ng/vim-hybrid'
   use {'kristijanhusak/vim-hybrid-material'}
-  use {'ulwlu/elly.vim', lock=true}
   use {'lighthaus-theme/vim-lighthaus'}
   use {'EdenEast/nightfox.nvim'}
   use {'adisen99/apprentice.nvim'}
@@ -96,6 +95,7 @@ require('packer').startup(function(use)
       -- Autocompletion
       {'hrsh7th/nvim-cmp'},         -- Required
       {'hrsh7th/cmp-nvim-lsp'},     -- Required
+      {'hrsh7th/cmp-cmdline'},
       {'hrsh7th/cmp-buffer'},       -- Optional
       {'hrsh7th/cmp-path'},         -- Optional
       {'saadparwaiz1/cmp_luasnip'}, -- Optional
@@ -104,7 +104,7 @@ require('packer').startup(function(use)
 
       -- Snippets
       {'L3MON4D3/LuaSnip'},             -- Required
-      {'rafamadriz/friendly-snippets'}, -- Optional
+      -- {'rafamadriz/friendly-snippets'}, -- Optional
     }
   }
 
