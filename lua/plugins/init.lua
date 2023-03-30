@@ -44,6 +44,7 @@ require('packer').startup(function(use)
   use { 'yuttie/inkstained-vim' }
   use { 'aktersnurra/no-clown-fiesta.nvim' }
   use { 'nikolvs/vim-sunbather' }
+  use { 'catppuccin/nvim' }
 
   -- Colorizer
   use {'norcalli/nvim-colorizer.lua'}
