@@ -60,7 +60,7 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 })
 
 local cmp_sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
+    { name = 'nvim_lsp', max_item_count = 10 },
     -- { name = 'vsnip' }, -- For vsnip users.
     { name = 'luasnip' }, -- For luasnip users.
     -- { name = 'ultisnips' }, -- For ultisnips users.

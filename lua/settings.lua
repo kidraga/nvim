@@ -39,7 +39,9 @@ vim.o.signcolumn = "yes" --Sign column for git signs
 vim.o.clipboard = "unnamedplus" --Copy paste between vim and everything else. Yank in vim and cmd+v to paste
 vim.o.autochdir = true --Your working directory will always be the same as your working directory
 vim.o.termguicolors = true
--- vim.o.guicursor="i:block-blinkon1-blinkoff1" -- see :h 'guicursor'
+-- vim.o.guicursor="n-v-c-sm:block-Cursor,i-ci-ve:hor20-Cursor,r-cr-o:hor20" -- see :h 'guicursor'
+vim.cmd([[au VimLeave,VimSuspend * set guicursor=a:hor20]]) -- reset cursor style after quitting. Neovim will override cursor style.
+-- https://github.com/neovim/neovim/wiki/FAQ#cursor-style-isnt-restored-after-exiting-or-suspending-and-resuming-nvim
 
 -- for nvim-tree
 -- disable netrw at the very start of your init.lua (strongly advised)
