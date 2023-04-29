@@ -8,5 +8,6 @@ set_hl(0, 'LineNr', {italic=false, fg='#303030', bg='#e5e5e5', nocombine=true, d
 set_hl(0, 'Type', {fg='#660066', italic=true, bold=false, default=false})
 set_hl(0, 'Comment', {fg='#999999', italic=true, bold=false, default=false})
 set_hl(0, "NvimTreeExecFile", {fg="#0000ff", bold=false})
+set_hl(0, "Pmenu", {bg='#dfdfdf'})
 require("themes.common")
 -- cursor color may not work. iterm controls it, not highlight group
