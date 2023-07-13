@@ -36,7 +36,7 @@ require('packer').startup(function(use)
   use {'axvr/raider.vim'}
   use {'chriskempson/tomorrow-theme'}
   use { 'folke/tokyonight.nvim' }
-  use({ 'rose-pine/neovim' })
+  use { 'rose-pine/neovim' }
   use { 'bdesham/biogoo' }
   use { 'barlog-m/oceanic-primal-vim' }
   use { 'vim-scripts/tango-morning.vim' }

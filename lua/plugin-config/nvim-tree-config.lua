@@ -6,7 +6,6 @@ vim.g.nvim_tree_indent_markers = 1 -- 0 by default, this option shows indent mar
 require'nvim-tree'.setup {
     disable_netrw       = true,
     hijack_netrw        = true,
-    ignore_ft_on_setup  = {},
     open_on_tab         = false,
     hijack_cursor       = false,
     update_cwd          = false,
