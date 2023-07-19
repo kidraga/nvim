@@ -5,6 +5,7 @@ require'nvim-treesitter.configs'.setup {
     "python",
     "javascript",
     "typescript",
+    "tsx",
     "bash",
     "dockerfile",
     "go",

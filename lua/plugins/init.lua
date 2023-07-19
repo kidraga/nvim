@@ -131,6 +131,7 @@ require('packer').startup(function(use)
   use {'airblade/vim-rooter'}
 
   use {'phaazon/hop.nvim'}
+  use {'folke/flash.nvim'}
 
   -- better search highlight
   use {'romainl/vim-cool'}
