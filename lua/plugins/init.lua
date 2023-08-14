@@ -109,6 +109,10 @@ require('packer').startup(function(use)
     }
   }
 
+  -- Prettier. Code formatting
+  use {'jose-elias-alvarez/null-ls.nvim'}
+  use {'MunifTanjim/prettier.nvim'} -- require prettierd: https://github.com/fsouza/prettierd
+
   -- gitsigns
   use {
     'lewis6991/gitsigns.nvim',
