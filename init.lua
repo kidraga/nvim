@@ -11,4 +11,5 @@ require('lsp')
 require('settings')
 
 -- load default theme
-require('themes.no-clown-fiesta.init')
+local color_picker = require('picker')
+color_picker.load_local_theme()

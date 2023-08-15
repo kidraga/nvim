@@ -2,3 +2,4 @@ autoload/*
 plugin/*
 tmux-client*
 tmux-server*
+theme.txt

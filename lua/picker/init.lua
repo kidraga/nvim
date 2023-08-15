@@ -1,9 +1,9 @@
-local actions = require("telescope.actions") -- picker object that will show us the prompt
+local actions = require("telescope.actions")            -- picker object that will show us the prompt
 local action_state = require("telescope.actions.state") -- picker object that will show us the prompt
-local pickers = require("telescope.pickers") -- picker object that will show us the prompt
-local finders = require("telescope.finders") -- finder will provide input for picker
-local sorters = require("telescope.sorters") -- finder will provide input for picker
-local themes = require("telescope.themes") -- finder will provide input for picker
+local pickers = require("telescope.pickers")            -- picker object that will show us the prompt
+local finders = require("telescope.finders")            -- finder will provide input for picker
+local sorters = require("telescope.sorters")            -- finder will provide input for picker
+local themes = require("telescope.themes")              -- finder will provide input for picker
 
 -- local map = vim.api.nvim_set_keymap
 local mini = {
@@ -16,27 +16,67 @@ local mini = {
   sorting_strategy = "ascending",
 }
 
+local home = os.getenv("HOME")
+local local_theme = home .. '/.config/nvim/theme.txt'
+local default_theme = 'no-clown-fiesta'
+
+-- check if customize config exist
 function config_exists(name)
-  local home = os.getenv("HOME")
   local potential_scheme_config = home .. '/.config/nvim/lua/themes/' .. name .. '/init.lua'
   local f = io.open(potential_scheme_config, "r")
-  if f~=nil then io.close(f) return true else return false end
-end
-
-function set_color()
-  local selected = action_state.get_selected_entry()
-  local scheme_name = selected[1]
-  if config_exists(scheme_name) then
-    print("Found config file for " .. scheme_name)
-    require('../themes/' .. scheme_name)
+  if f ~= nil then
+    io.close(f)
+    return true
   else
-    print("No config found")
-    vim.cmd('colorscheme ' .. scheme_name)
+    return false
   end
 end
 
+function set_color(theme_name)
+  if config_exists(theme_name) then
+    print("Found config file for " .. theme_name)
+    require('../themes/' .. theme_name)
+  else
+    print("No config found")
+    vim.cmd('colorscheme ' .. theme_name)
+  end
+end
+
+function set_local_theme(theme_name)
+  local f = io.open(local_theme, "w")
+  if f ~= nil then
+    f:write(theme_name .. "\n")
+    print("Updated local theme file")
+    f:close()
+  else
+    print("No local theme file found.")
+  end
+end
+
+function load_local_theme(verbose)
+  local verbose = verbose or true
+  local f = io.open(local_theme, "r")
+  local theme_to_load = default_theme
+  if f ~= nil then
+    local theme_name = f:read()
+    f:close()
+    theme_to_load = theme_name
+    if verbose then
+      print("Found theme from local: " .. theme_name)
+    end
+  else
+    if verbose then
+      print("No local theme file found.")
+    end
+  end
+  set_color(theme_to_load)
+end
+
 function enter(prompt_bufnr)
-  set_color()
+  local selected = action_state.get_selected_entry()
+  local theme_name = selected[1]
+  set_color(theme_name)
+  set_local_theme(theme_name)
   actions.close(prompt_bufnr)
 end
 
@@ -56,7 +96,8 @@ function prev_color(prompt_bufnr)
   vim.cmd(cmd)
 end
 
-local bad_colorschemes = { -- all default themes
+local bad_colorschemes = {
+  -- all default themes
   ['apprentice'] = true,
   ['blue'] = true,
   ['darkblue'] = true,
@@ -101,7 +142,6 @@ local opts = {
     map('n', 'k', prev_color)
     return true
   end,
-
 }
 
 -- local dropdown = themes.get_dropdown()
@@ -110,8 +150,13 @@ local cursor = themes.get_cursor()
 
 local colors = pickers.new(mini, opts)
 
+local M = {}
+function M.run_color_picker()
+  colors:find()
+end
 
--- run the picker
-colors:find()
+function M.load_local_theme()
+  load_local_theme(false)
+end
 
--- print(vim.inspect(dropdown))
+return M
