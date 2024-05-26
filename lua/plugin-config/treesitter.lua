@@ -16,9 +16,6 @@ require'nvim-treesitter.configs'.setup {
     "yaml",
     "markdown"
   },
-  autotag = {
-    enable = true,
-  },
 
   -- Install languages synchronously (only applied to `ensure_installed`)
   sync_install = false,

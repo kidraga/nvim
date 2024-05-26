@@ -46,6 +46,7 @@ require('packer').startup(function(use)
   use { 'nikolvs/vim-sunbather' }
   use { 'catppuccin/nvim' }
   use {'AlexvZyl/nordic.nvim'}
+  use {'Verf/deepwhite.nvim'}
 
   -- Colorizer
   use {'norcalli/nvim-colorizer.lua'}
