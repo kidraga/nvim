@@ -1,7 +1,7 @@
 local fn = vim.fn
 
 -- Autocommand that reloads neovim whenever you save this file
-vim.cmd[[
+vim.cmd [[
   augroup packer_user_config
     autocmd!
     autocmd BufWritePost init.lua source <afile> | PackerSync
@@ -25,16 +25,16 @@ require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   -- Theme
   use 'w0ng/vim-hybrid'
-  use {'kristijanhusak/vim-hybrid-material'}
-  use {'lighthaus-theme/vim-lighthaus'}
-  use {'EdenEast/nightfox.nvim'}
-  use {'adisen99/apprentice.nvim'}
-  use {'jonathanfilip/vim-lucius'}
-  use {'rebelot/kanagawa.nvim'}
-  use {'sainnhe/everforest'}
-  use {'gkapfham/vim-vitamin-onec'}
-  use {'axvr/raider.vim'}
-  use {'chriskempson/tomorrow-theme'}
+  use { 'kristijanhusak/vim-hybrid-material' }
+  use { 'lighthaus-theme/vim-lighthaus' }
+  use { 'EdenEast/nightfox.nvim' }
+  use { 'adisen99/apprentice.nvim' }
+  use { 'jonathanfilip/vim-lucius' }
+  use { 'rebelot/kanagawa.nvim' }
+  use { 'sainnhe/everforest' }
+  use { 'gkapfham/vim-vitamin-onec' }
+  use { 'axvr/raider.vim' }
+  use { 'chriskempson/tomorrow-theme' }
   use { 'folke/tokyonight.nvim' }
   use { 'rose-pine/neovim' }
   use { 'bdesham/biogoo' }
@@ -45,17 +45,20 @@ require('packer').startup(function(use)
   use { 'aktersnurra/no-clown-fiesta.nvim' }
   use { 'nikolvs/vim-sunbather' }
   use { 'catppuccin/nvim' }
-  use {'AlexvZyl/nordic.nvim'}
-  use {'Verf/deepwhite.nvim'}
+  use { 'AlexvZyl/nordic.nvim' }
+  use { 'Verf/deepwhite.nvim' }
+  use { 'TheNiteCoder/mountaineer.vim' }
+  use { 'cseelus/vim-colors-lucid' }
+  use { 'vim-scripts/pyte' }
 
   -- Colorizer
-  use {'norcalli/nvim-colorizer.lua'}
+  use { 'norcalli/nvim-colorizer.lua' }
 
 
   -- Treesitter
-  use {'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
-  use {'nvim-treesitter/playground'}
-  use {'nvim-treesitter/nvim-treesitter-refactor'}
+  use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate" }
+  use { 'nvim-treesitter/playground' }
+  use { 'nvim-treesitter/nvim-treesitter-refactor' }
 
   -- lualine
   use {
@@ -64,25 +67,25 @@ require('packer').startup(function(use)
   }
 
   -- Bufferline
-  use {'akinsho/bufferline.nvim',
-  requires = 'kyazdani42/nvim-web-devicons',
-  lock = true}
+  use { 'akinsho/bufferline.nvim',
+    requires = 'kyazdani42/nvim-web-devicons',
+    lock = true }
 
   -- Nvim tree
   use { 'nvim-tree/nvim-tree.lua' }
-  use {'nvim-tree/nvim-web-devicons'}
+  use { 'nvim-tree/nvim-web-devicons' }
 
 
   -- ts tag auto-close
-  use {'windwp/nvim-ts-autotag'}
+  use { 'windwp/nvim-ts-autotag' }
 
   -- auto pair
-  use {'windwp/nvim-autopairs'}
+  use { 'windwp/nvim-autopairs' }
 
   -- telescope
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
   -- lsp
@@ -91,29 +94,29 @@ require('packer').startup(function(use)
     branch = 'v1.x',
     requires = {
       -- LSP Support
-      {'neovim/nvim-lspconfig'},             -- Required
-      {'williamboman/mason.nvim'},           -- Optional
-      {'williamboman/mason-lspconfig.nvim'}, -- Optional
+      { 'neovim/nvim-lspconfig' },             -- Required
+      { 'williamboman/mason.nvim' },           -- Optional
+      { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
       -- Autocompletion
-      {'hrsh7th/nvim-cmp'},         -- Required
-      {'hrsh7th/cmp-nvim-lsp'},     -- Required
-      {'hrsh7th/cmp-cmdline'},
-      {'hrsh7th/cmp-buffer'},       -- Optional
-      {'hrsh7th/cmp-path'},         -- Optional
-      {'saadparwaiz1/cmp_luasnip'}, -- Optional
-      {'hrsh7th/cmp-nvim-lua'},     -- Optional
-      {'onsails/lspkind.nvim'},    -- Optional. Use it to create VSCode like icons stuff
+      { 'hrsh7th/nvim-cmp' },         -- Required
+      { 'hrsh7th/cmp-nvim-lsp' },     -- Required
+      { 'hrsh7th/cmp-cmdline' },
+      { 'hrsh7th/cmp-buffer' },       -- Optional
+      { 'hrsh7th/cmp-path' },         -- Optional
+      { 'saadparwaiz1/cmp_luasnip' }, -- Optional
+      { 'hrsh7th/cmp-nvim-lua' },     -- Optional
+      { 'onsails/lspkind.nvim' },     -- Optional. Use it to create VSCode like icons stuff
 
       -- Snippets
-      {'L3MON4D3/LuaSnip'},             -- Required
+      { 'L3MON4D3/LuaSnip' }, -- Required
       -- {'rafamadriz/friendly-snippets'}, -- Optional
     }
   }
 
   -- Prettier. Code formatting
-  use {'jose-elias-alvarez/null-ls.nvim'}
-  use {'MunifTanjim/prettier.nvim'} -- require prettierd: https://github.com/fsouza/prettierd
+  use { 'jose-elias-alvarez/null-ls.nvim' }
+  use { 'MunifTanjim/prettier.nvim' } -- require prettierd: https://github.com/fsouza/prettierd
 
   -- gitsigns
   use {
@@ -125,25 +128,25 @@ require('packer').startup(function(use)
   }
 
   -- indent blankline
-  use {"lukas-reineke/indent-blankline.nvim"}
+  use { "lukas-reineke/indent-blankline.nvim" }
 
   -- terminal
-  use {"akinsho/toggleterm.nvim", lock=true}
+  use { "akinsho/toggleterm.nvim", lock = true }
 
   -- comment
-  use {"terrortylor/nvim-comment"}
+  use { "terrortylor/nvim-comment" }
 
   -- Find project root by .git file
-  use {'airblade/vim-rooter'}
+  use { 'airblade/vim-rooter' }
 
-  use {'phaazon/hop.nvim'}
-  use {'folke/flash.nvim'}
+  use { 'phaazon/hop.nvim' }
+  use { 'folke/flash.nvim' }
 
   -- better search highlight
-  use {'romainl/vim-cool'}
+  use { 'romainl/vim-cool' }
 
   -- highlight current word under cursor
-  use {'dominikduda/vim_current_word'}
+  use { 'dominikduda/vim_current_word' }
 
   -- React and jsx
   use 'yuezk/vim-js'
@@ -153,16 +156,16 @@ require('packer').startup(function(use)
   -- save pic in markdown. Need to install xclip first
   use 'ferrine/md-img-paste.vim'
   -- markdown preview
-  use {'iamcco/markdown-preview.nvim',  run = ':call mkdp#util#install()'}
+  use { 'iamcco/markdown-preview.nvim', run = ':call mkdp#util#install()' }
   -- code block syntax highlight
-  use {'preservim/vim-markdown'}
+  use { 'preservim/vim-markdown' }
 
-  use {'mfussenegger/nvim-jdtls'}
+  use { 'mfussenegger/nvim-jdtls' }
 
-  use {'ms-jpq/coq_nvim', branch = 'coq'}
-  use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
-  use {'ms-jpq/coq.thirdparty', branch = '3p'}
+  use { 'ms-jpq/coq_nvim', branch = 'coq' }
+  use { 'ms-jpq/coq.artifacts', branch = 'artifacts' }
+  use { 'ms-jpq/coq.thirdparty', branch = '3p' }
 
-  use {'tpope/vim-repeat'}
-  use {'tpope/vim-surround'}
+  use { 'tpope/vim-repeat' }
+  use { 'tpope/vim-surround' }
 end)
