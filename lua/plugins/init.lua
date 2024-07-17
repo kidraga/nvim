@@ -50,6 +50,8 @@ require('packer').startup(function(use)
   use { 'TheNiteCoder/mountaineer.vim' }
   use { 'cseelus/vim-colors-lucid' }
   use { 'vim-scripts/pyte' }
+  use { 'vague2k/vague.nvim' }
+  use {'NLKNguyen/papercolor-theme' }
 
   -- Colorizer
   use { 'norcalli/nvim-colorizer.lua' }
