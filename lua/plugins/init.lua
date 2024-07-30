@@ -51,7 +51,7 @@ require('packer').startup(function(use)
   use { 'cseelus/vim-colors-lucid' }
   use { 'vim-scripts/pyte' }
   use { 'vague2k/vague.nvim' }
-  use {'NLKNguyen/papercolor-theme' }
+  use { 'NLKNguyen/papercolor-theme' }
 
   -- Colorizer
   use { 'norcalli/nvim-colorizer.lua' }
@@ -70,8 +70,8 @@ require('packer').startup(function(use)
 
   -- Bufferline
   use { 'akinsho/bufferline.nvim',
-    requires = 'kyazdani42/nvim-web-devicons',
-    lock = true }
+    requires = 'nvim-tree/nvim-web-devicons',
+  }
 
   -- Nvim tree
   use { 'nvim-tree/nvim-tree.lua' }
