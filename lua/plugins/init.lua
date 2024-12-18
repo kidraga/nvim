@@ -52,6 +52,7 @@ require('packer').startup(function(use)
   use { 'vim-scripts/pyte' }
   use { 'vague2k/vague.nvim' }
   use { 'NLKNguyen/papercolor-theme' }
+  use { 'bettervim/yugen.nvim' }
 
   -- Colorizer
   use { 'norcalli/nvim-colorizer.lua' }
