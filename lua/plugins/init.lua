@@ -99,7 +99,7 @@ require('packer').startup(function(use)
       -- LSP Support
       { 'neovim/nvim-lspconfig' },             -- Required
       { 'williamboman/mason.nvim' },           -- Optional
-      { 'williamboman/mason-lspconfig.nvim' }, -- Optional
+      -- { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
       -- Autocompletion
       { 'hrsh7th/nvim-cmp' },         -- Required
@@ -117,8 +117,7 @@ require('packer').startup(function(use)
     }
   }
 
-  -- Prettier. Code formatting
-  use { 'jose-elias-alvarez/null-ls.nvim' }
+  -- Prettier.
   use { 'MunifTanjim/prettier.nvim' } -- require prettierd: https://github.com/fsouza/prettierd
 
   -- gitsigns
