@@ -53,6 +53,11 @@ require('packer').startup(function(use)
   use { 'vague2k/vague.nvim' }
   use { 'NLKNguyen/papercolor-theme' }
   use { 'bettervim/yugen.nvim' }
+  use { 'webhooked/kanso.nvim' }
+  use { 'datsfilipe/vesper.nvim' }
+  use { 'p00f/alabaster.nvim' }
+  use { 'ramojus/mellifluous.nvim' }
+  use { 'ficd0/ashen.nvim' }
 
   -- Colorizer
   use { 'norcalli/nvim-colorizer.lua' }
