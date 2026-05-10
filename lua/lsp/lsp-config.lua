@@ -10,7 +10,6 @@ end
 
 -- Load required modules
 local lspkind = require('lspkind')
-local lspconfig = require('lspconfig')
 local cmp = require('cmp')
 -- Import luasnip
 local import_luasnip, luasnip = pcall(require, 'luaSnip')
@@ -24,7 +23,7 @@ if mason_ok then
   local mason_lspconfig_ok, mason_lspconfig = pcall(require, 'mason-lspconfig')
   if mason_lspconfig_ok then
     mason_lspconfig.setup({
-      ensure_installed = {'tsserver'},
+      ensure_installed = {'ts_ls'},
       automatic_installation = true,
     })
   end
@@ -64,10 +63,11 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_set_keymap('n', '<leader>dd', '<cmd>Telescope diagnostics<CR>', { noremap = true, silent = true })
 end
 
-lspconfig.tsserver.setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
+vim.lsp.config('ts_ls', {
+  capabilities = capabilities,
+  on_attach = on_attach,
 })
+vim.lsp.enable('ts_ls')
 
 -- Show a floating window for diagnostics
 -- https://smarttech101.com/nvim-lsp-diagnostics-keybindings-signs-virtual-texts/
