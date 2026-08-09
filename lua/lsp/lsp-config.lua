@@ -15,18 +15,10 @@ local cmp = require('cmp')
 local import_luasnip, luasnip = pcall(require, 'luaSnip')
 if not import_luasnip then return end
 
--- Setup mason for automatic LSP serlatiover installation
+-- Setup mason for automatic LSP server installation
 local mason_ok, mason = pcall(require, 'mason')
 if mason_ok then
   mason.setup()
-
-  local mason_lspconfig_ok, mason_lspconfig = pcall(require, 'mason-lspconfig')
-  if mason_lspconfig_ok then
-    mason_lspconfig.setup({
-      ensure_installed = {'ts_ls'},
-      automatic_installation = true,
-    })
-  end
 end
 
 -- LSP capabilities for nvim-cmp
@@ -53,7 +45,7 @@ local on_attach = function(client, bufnr)
   -- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
-  -- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts) -- check treesitter.lua
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
   vim.api.nvim_set_keymap('n', '<leader>do', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap = true, silent = true })

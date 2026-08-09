@@ -61,11 +61,16 @@ map('n', '<leader>x', ':bp|bd #<CR>', noreSilentOpt)
 -- hop
 map('n', '<leader><leader>w', ':HopWord<CR>', noreSilentOpt)
 
+-- flash
+map({ 'n', 'x', 'o' }, 's', function() require('flash').jump() end, noreSilentOpt)
+map({ 'n', 'x', 'o' }, 'S', function() require('flash').treesitter() end, noreSilentOpt)
+map('o', 'r', function() require('flash').remote() end, noreSilentOpt)
+map({ 'o', 'x' }, 'R', function() require('flash').treesitter_search() end, noreSilentOpt)
+
 -- Open CHADTree
 -- map('n', '<C-n>', ':CHADopen<CR>', {noremap = true, silent = true})
 
 -- LSP
--- map('n', 'gd', '<cmd>lua vim.lsp.buf.type_definition()<CR>', noreSilentOpt) -- using treesitter. see treesitter.lua
 map('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', noreSilentOpt)
 map('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', noreSilentOpt)
 map('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', noreSilentOpt)

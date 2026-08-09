@@ -64,9 +64,8 @@ require('packer').startup(function(use)
 
 
   -- Treesitter
-  use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate" }
-  use { 'nvim-treesitter/playground' }
-  use { 'nvim-treesitter/nvim-treesitter-refactor' }
+  -- Pinned to `master`: `main` is a full rewrite requiring Neovim 0.12+ and a different config API.
+  use { 'nvim-treesitter/nvim-treesitter', branch = 'master', run = ":TSUpdate" }
 
   -- lualine
   use {
@@ -97,30 +96,21 @@ require('packer').startup(function(use)
   }
 
   -- lsp
-  use {
-    'VonHeikemen/lsp-zero.nvim',
-    branch = 'v1.x',
-    requires = {
-      -- LSP Support
-      { 'neovim/nvim-lspconfig' },             -- Required
-      { 'williamboman/mason.nvim' },           -- Optional
-      -- { 'williamboman/mason-lspconfig.nvim' }, -- Optional
+  use { 'neovim/nvim-lspconfig' }
+  use { 'williamboman/mason.nvim' }
 
-      -- Autocompletion
-      { 'hrsh7th/nvim-cmp' },         -- Required
-      { 'hrsh7th/cmp-nvim-lsp' },     -- Required
-      { 'hrsh7th/cmp-cmdline' },
-      { 'hrsh7th/cmp-buffer' },       -- Optional
-      { 'hrsh7th/cmp-path' },         -- Optional
-      { 'saadparwaiz1/cmp_luasnip' }, -- Optional
-      { 'hrsh7th/cmp-nvim-lua' },     -- Optional
-      { 'onsails/lspkind.nvim' },     -- Optional. Use it to create VSCode like icons stuff
+  -- Autocompletion
+  use { 'hrsh7th/nvim-cmp' }
+  use { 'hrsh7th/cmp-nvim-lsp' }
+  use { 'hrsh7th/cmp-cmdline' }
+  use { 'hrsh7th/cmp-buffer' }
+  use { 'hrsh7th/cmp-path' }
+  use { 'saadparwaiz1/cmp_luasnip' }
+  use { 'hrsh7th/cmp-nvim-lua' }
+  use { 'onsails/lspkind.nvim' } -- Use it to create VSCode like icons stuff
 
-      -- Snippets
-      { 'L3MON4D3/LuaSnip' }, -- Required
-      -- {'rafamadriz/friendly-snippets'}, -- Optional
-    }
-  }
+  -- Snippets
+  use { 'L3MON4D3/LuaSnip' }
 
   -- Prettier.
   use { 'MunifTanjim/prettier.nvim' } -- require prettierd: https://github.com/fsouza/prettierd
@@ -138,7 +128,7 @@ require('packer').startup(function(use)
   use { "lukas-reineke/indent-blankline.nvim" }
 
   -- terminal
-  use { "akinsho/toggleterm.nvim", lock = true }
+  use { "akinsho/toggleterm.nvim" }
 
   -- comment
   use { "terrortylor/nvim-comment" }
@@ -146,7 +136,7 @@ require('packer').startup(function(use)
   -- Find project root by .git file
   use { 'airblade/vim-rooter' }
 
-  use { 'phaazon/hop.nvim' }
+  use { 'smoka7/hop.nvim' }
   use { 'folke/flash.nvim' }
 
   -- better search highlight
@@ -168,10 +158,6 @@ require('packer').startup(function(use)
   use { 'preservim/vim-markdown' }
 
   use { 'mfussenegger/nvim-jdtls' }
-
-  use { 'ms-jpq/coq_nvim', branch = 'coq' }
-  use { 'ms-jpq/coq.artifacts', branch = 'artifacts' }
-  use { 'ms-jpq/coq.thirdparty', branch = '3p' }
 
   use { 'tpope/vim-repeat' }
   use { 'tpope/vim-surround' }

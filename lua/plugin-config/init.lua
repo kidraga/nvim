@@ -1,6 +1,5 @@
 require('plugin-config.treesitter')
 require('plugin-config.lualine-config')
--- require('plugin-config.airline-config')
 require('plugin-config.bufferline-config')
 require('plugin-config.nvim-tree-config')
 require('plugin-config.nvim-ts-autotag')

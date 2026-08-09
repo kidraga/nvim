@@ -36,28 +36,4 @@ require'nvim-treesitter.configs'.setup {
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false,
   },
-  -- https://github.com/nvim-treesitter/nvim-treesitter-refactor
-  refactor = {
-    highlight_definitions = {
-      enable = true,
-      -- Set to false if you have an `updatetime` of ~100.
-      clear_on_cursor_move = true,
-    },
-    smart_rename = {
-      enable = true,
-      keymaps = {
-        smart_rename = "grn",
-      }
-    },
-    navigation = {
-      enable = true,
-      keymaps = {
-        goto_definition = "gd",
-        list_definitions = "gld",
-        list_definitions_toc = "gO",
-        goto_next_usage = "<A-*>",
-        goto_previous_usage = "<A-#>",
-      },
-    },
-  },
 }
