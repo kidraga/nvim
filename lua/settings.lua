@@ -48,6 +48,7 @@ vim.cmd([[au VimLeave,VimSuspend * set guicursor=a:hor20]]) -- reset cursor styl
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+
 -- au! BufWritePost $MYVIMRC source %      --auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
 -- --You can't stop me

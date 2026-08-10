@@ -61,6 +61,36 @@ vim.lsp.config('ts_ls', {
 })
 vim.lsp.enable('ts_ls')
 
+-- pyright: types, hover, completion, go-to-def
+vim.lsp.config('pyright', {
+  capabilities = capabilities,
+  on_attach = on_attach,
+})
+vim.lsp.enable('pyright')
+
+-- ruff: linting, import sort, fast diagnostics
+vim.lsp.config('ruff', {
+  capabilities = capabilities,
+  on_attach = on_attach,
+})
+vim.lsp.enable('ruff')
+
+-- Arduino LSP requires arduino-cli + arduino-language-server, only set up on my own laptop
+if vim.g.is_own_laptop then
+  vim.lsp.config('arduino_language_server', {
+    capabilities = capabilities,
+    on_attach = on_attach,
+    -- the default cmd doesn't pass these, but the server requires them to start
+    cmd = {
+      'arduino-language-server',
+      '-cli', 'arduino-cli',
+      '-cli-config', vim.fn.expand('~/Library/Arduino15/arduino-cli.yaml'),
+      '-clangd', 'clangd',
+    },
+  })
+  vim.lsp.enable('arduino_language_server')
+end
+
 -- Show a floating window for diagnostics
 -- https://smarttech101.com/nvim-lsp-diagnostics-keybindings-signs-virtual-texts/
 vim.diagnostic.config({
