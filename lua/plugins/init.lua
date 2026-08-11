@@ -161,4 +161,7 @@ require('packer').startup(function(use)
 
   use { 'tpope/vim-repeat' }
   use { 'tpope/vim-surround' }
+
+  -- smooth scrolling
+  use { 'karb94/neoscroll.nvim' }
 end)
