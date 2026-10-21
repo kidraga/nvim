@@ -130,6 +130,12 @@ require('packer').startup(function(use)
   -- terminal
   use { "akinsho/toggleterm.nvim" }
 
+  -- Claude Code integration (send selections to Claude)
+  use { "coder/claudecode.nvim" }
+
+  -- Show available keybindings after a prefix key
+  use { "folke/which-key.nvim" }
+
   -- comment
   use { "terrortylor/nvim-comment" }
 
