@@ -142,12 +142,12 @@ cmp.setup({
       end
     end, { "i", "s", "c" }),
   }),
+  -- Higher priority wins: LSP first, then path, then buffer words.
   sources = cmp.config.sources({
-    { name = 'nvim_lsp', max_item_count = 10 },
-    { name = 'luasnip' },
-  }, {
-    { name = 'buffer' },
-    { name = 'path' },
+    { name = 'nvim_lsp', max_item_count = 10, priority = 1000 },
+    { name = 'luasnip', priority = 900 },
+    { name = 'path', priority = 800 },
+    { name = 'buffer', priority = 100 },
   }),
   formatting = {
     fields = { "kind", "abbr", "menu" },
@@ -155,11 +155,11 @@ cmp.setup({
       with_text = true,
       maxwidth = 50,
       menu = ({
-        buffer = "[Buffer]",
         nvim_lsp = "[LSP]",
         luasnip = "[LuaSnip]",
         nvim_lua = "[Lua]",
         path = "[Path]",
+        buffer = "[Buffer]",
       })
     })
   }
