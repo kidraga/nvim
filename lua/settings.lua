@@ -24,6 +24,7 @@ vim.o.smartindent = true     --Makes indenting smart
 vim.o.autoindent = true      --Good auto indent
 -- vim.o.laststatus = 0 --Always display the status line. Will override many statusline plugins silently.
 vim.o.number = true          --Line numbers
+vim.o.statuscolumn = "%s%3l   " -- sign column, then line number right-aligned in 3 cols, then 3 spaces
 vim.o.cursorline = true      --Enable highlighting of the current line
 -- vim.o.background=dark                     --tell vim what the background color looks like
 vim.o.showtabline = 2        --Always show tabs on top
