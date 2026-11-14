@@ -75,6 +75,23 @@ vim.lsp.config('ruff', {
 })
 vim.lsp.enable('ruff')
 
+-- lua_ls: completion, hover and diagnostics for Lua (including this Neovim config)
+vim.lsp.config('lua_ls', {
+  capabilities = capabilities,
+  on_attach = on_attach,
+  on_init = function(client)
+    client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
+      runtime = { version = 'LuaJIT' },
+      workspace = {
+        checkThirdParty = false,
+        library = { vim.env.VIMRUNTIME },
+      },
+      diagnostics = { globals = { 'vim' } },
+    })
+  end,
+})
+vim.lsp.enable('lua_ls')
+
 -- Arduino LSP requires arduino-cli + arduino-language-server, only set up on my own laptop
 if vim.g.is_own_laptop then
   vim.lsp.config('arduino_language_server', {

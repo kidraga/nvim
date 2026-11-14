@@ -1,4 +1,4 @@
-vim.opt.list = true
+-- vim.opt.list = true
 local highlight = {
   "Whitespace",
 }
